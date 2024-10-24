@@ -1,0 +1,79 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}ПчелоМатка{% endblock %}
+
+
+{% block menupro %}
+    {{ include('app/proekts/_tabs.html.twig') }}
+    {{ include('app/proekts/page_glavas/pchelomatka/_tabs.html.twig') }}
+{% endblock %}
+
+{% block kroxii %}
+    <a href="{{ path('proekt') }}">Главная</a>
+    <span class="aktiv ">Забыли что дальше? Жмите тут</span>
+{% endblock %}
+
+{% block bodyy %}
+    <div class=" proekts ">
+
+        <div class="inklud inklud--pchelomat ">
+
+            <div class="pchelo-title  pchelo-teni ">
+               Список.  Все переходы&nbsp; &nbsp;
+            </div>
+        </div>
+        <div class="proekts-plr  ">
+
+            <ul class="td_cent ">
+
+                <li >
+                        <div class="foto-pchelo pchelo-spisok-wse"></div>
+                </li>
+            </ul>
+            <ul class="mestoo__title">
+                <li class="pchelo__name-list pchelo__name-list--wid  ">
+
+                    <a class=" pchelo-ramka-spisok "
+                       href="#">  <p>Расшифровка  названия</p>   Ср-1 : бр/с : 3-61-1_пн-7 : 1-2024
+                    </a>
+                </li>
+
+                <li class="mestoo__title-item ">
+                        <div class="foto-pchelo pchelo-shifr"></div>
+                </li>
+            </ul>
+            <ul class="mestoo__title">
+                <li class="mestoo__title-item mestoo__nomer"   >
+                       <div class="drevimg "></div>
+                </li>
+                <li class="mestoo__title-item mestoo__nomer">
+                    <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.creates.create') }}">
+                        -  переход к работе с конкретной маткой
+                    </a>
+                </li>
+
+                <li class="mestoo__title-item ">
+                        <div class="foto-pchelo pchelo-redakt"></div>
+                </li>
+            </ul>
+
+            <ul class="mestoo__title">
+
+                <li class="mestoo__title-item mestoo__nomer"   >
+                    <div class="matimg"></div>
+                </li>
+
+                <li class="mestoo__title-item mestoo__nomer">
+                    <a href="{{ path('app.proekts.pasekas.pchelomatkas.kategoris.kategor') }}"> - объявление Дочь - Пчело </a>
+                </li>
+
+                <li class="mestoo__title-item ">
+                    <a href="{{ path('app.proekts.pasekas.pchelomatkas.kategoris.kategor') }}">
+                        <div class="foto-pchelo pchelo-kateg"></div>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+{% endblock %}

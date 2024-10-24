@@ -1,0 +1,97 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}Редактирование{% endblock %}
+
+{% block menupro %}
+    {{ include('app/proekts/_tabs.html.twig') }}
+    {{ include('app/proekts/page_glavas/pchelomatka/_tabs.html.twig') }}
+{% endblock %}
+
+{#   {% block kroxii %}#}
+{#       <a href="{{ path('proekt') }}">Главная</a>#}
+{#       <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelocreates') }}">Рег-ция Пчело-Матки</a>#}
+{#       <a href="{{ path('app.proekts.pasekas.matkas') }}">Список Пчело-Маток</a>#}
+{#       <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.show', {'pchelomatka_id': pchelomatka.id}) }}">{{ pchelomatka.name }}</a>#}
+{#       <span class="aktiv ">Выбрать сезон у Пчело-Матки</span>#}
+{#   {% endblock %}#}
+
+{% block bodyy %}
+
+    <div class=" proekts pro-pchelomat">
+
+        <div class="inklud inklud--pchelomat ">
+
+            <div class="pchelo-title  pchelo-teni ">
+                Выбрать сезон у Пчело-Матки для добавления Дочь-Пчело
+            </div>
+        </div>
+
+
+        <div class="proekts-plr">
+
+            <div class="pchelo-titul ">
+                <span>{{ pchelomatka.name }} </span>
+                <span class=" pchelo-titul--col "> -- Пчело-Матка и её рабочие
+                сезоны</span>
+            </div>
+            {% for pchelovod in pchelovods %}
+                <div class="pchelo-titul ">
+                    <span class="strongo strongo--kras">{{ pchelovod.uchastie.nike }} , </span>
+                    <span>  внимательно выбирайте </span>
+                    <span class="strongo strongo--kras"> сезон </span> :
+                </div>
+
+                <ul class="plem plem__jus-st ">
+                    <li class="ma-le-2 ">
+                        <ul class="list-unstyled my-0">
+                            {% for pchelosezon in pchelovod.pchelosezons %}
+                                {% set perii = pchelosezon.name + 1 %}
+                                <li>
+                                    {% if pchelomatka %}
+
+                                        <div class="controls">
+                                            <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.childpchelos.create', {'pchelomatka_id' : pchelomatka.id, 'pchelosezon_id' : pchelosezon.id  } ) }}"
+                                               class="btnn   btnn-pchel  ">
+                                                <span class="strongo strongo--kras">{{ pchelosezon.name }} - {{ perii }}</span>
+                                                -
+                                                добавить Дочь-Пчело
+                                            </a>
+                                        </div>
+                                    {% endif %}
+
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+{#                    <li class="ma-le_6 ">#}
+{#                        <ul class="list-unstyled ">#}
+{#                            <li >/=================/</li>#}
+{#                            <li>.................</li>#}
+{#                        </ul>#}
+{#                    </li>#}
+
+                </ul>
+            {% endfor %}
+
+            <ul class="pchelo pchelo__jus-st ">
+                
+                <li> &nbsp;
+                    <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.pchelovods.edit',
+                        {'pchelomatka_id': pchelomatka.id}) }}" class="   btnn-elit">
+                       <span class="strongo strongo--kras">  Объявить </span>  ещё сезон
+                    </a>
+                </li>
+                <li> &nbsp;
+                    <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.pchelovods.edit',
+                        {'pchelomatka_id': pchelomatka.id}) }}" class="  btnn-elit ">
+                        <span class="strongo strongo--kras">  Добавить </span> ещё сезон!
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+
+{% endblock %}

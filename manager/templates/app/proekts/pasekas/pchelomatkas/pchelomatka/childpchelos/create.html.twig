@@ -1,0 +1,79 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}Добавить{% endblock %}
+
+   {% block menupro %}
+       {{ include('app/proekts/_tabs.html.twig') }}
+
+       {{ include('app/proekts/page_glavas/pchelomatka/childs/_tabs.html.twig') }}
+   {% endblock %}
+
+{#{% block kroxii %}#}
+{#    <a href="{{ path('proekt') }}">Главная</a>#}
+{#    <a href="{{ path('app.proekts.pasekas.matkas.pchelomatkas.creates') }}">Рег-ция ПлемМатки</a>#}
+{#    <a href="{{ path('app.proekts.pasekas.matkas') }}">Список ПлемМаток</a>#}
+{#    <a href="{{ path('app.proekts.pasekas.matkas') }}">???Список ПлемМаток</a>#}
+{#    <span class="aktiv ">Добавить ДочьМаток!</span>#}
+{#{% endblock %}   #}
+
+{% block bodyy %}
+    {% set pchelosezonss = pchelosezonPlem +1 %}
+    <div class=" proekts pro-pchelomat">
+
+        <div class="inklud inklud--pchelomat ">
+
+            <div class="pchelo-title  pchelo-teni ">
+                {#            {% if childmatka.parent %}#}
+                {#                <a href="{{ path('app.proekts.pasekas.childmatkas.show', {'id': childmatka.parent.id}) }}"#}
+                {#                   style="color: #155799;; " > {{ childmatka.parent.name }} </a>#}
+                {#            {% else %}#}
+                <span class="strongo--elit "> Пчело-Матка </span> {{ pchelomatka.name }} <span class="strongo--elit ">
+                    сезон </span>  {{ pchelosezonPlem }} - {{ pchelosezonss }}
+
+                {#            {% endif %}#}
+
+            </div>
+        </div>
+
+        <div class="proekts-plr  ">
+            <div class="pchelo-titul ">
+                <span>Заполняем </span>
+                <span class=" pchelo-titul--col "> 6-ть </span>
+                <span class="  "> позиций:</span>
+            </div>
+
+            <div class="matki-form__header  ">
+                <div class="matki-form ">
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    <div>
+                        <button type="submit" class="btnn-elit ">- Сохранить -</button>
+                    </div>
+                    {{ form_end(form) }}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {#    <div class="controls">#}
+    {#        <h2> Добавить ДочьМатку к  <strong class="strongo strongo--kras">  {{ pchelomatka.name }} </strong> сезон#}
+    {#            <strong class="strongo strongo--kras">  {{ sezonPlem }} </strong></h2>#}
+    {#    </div>#}
+
+    {#    <div class="card">#}
+    {#        <div class="card-body">#}
+
+    {#            {{ form_start(form) }}#}
+    {#            {{ form_widget(form) }}#}
+    {#            <div>#}
+    {#                <button type="submit" class="btn btn-primary">СОХРАНИТЬ</button>#}
+    {#                <a href="{{ path('adminka.matkas') }}"#}
+    {#                   class="btn-my btn-my--sm"> Выйти из режима "Добавить"</a>#}
+    {#            </div>#}
+    {#            {{ form_end(form) }}#}
+
+    {#        </div>#}
+    {#    </div>#}
+
+{% endblock %}

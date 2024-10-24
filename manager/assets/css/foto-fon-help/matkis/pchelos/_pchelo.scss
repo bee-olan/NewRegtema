@@ -1,0 +1,56 @@
+.foto-pchelo {
+  display: block; // блочная
+  margin: 2rem auto 1.5rem;
+  position: relative; //чтобы бордер не исчезал  под картинкой
+
+  //border: 2px solid $border-foto;
+  border: 2px solid $border-linia-nav ;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+  border-radius: 5px;
+}
+.pchelo-reg {
+  background-image: url('../../../../images/foto-for-help/pchelos/pchelo-reg.png');
+  width: 770px;
+  height: 363px;
+}
+
+.pchelo-spisok {
+  background-image: url('../../../../images/foto-for-help/pchelos/pchelo-spisok.png');
+  width: 782px;
+  height: 343px;
+}
+
+.pchel-kateg {
+  background-image: url('../../../../images/foto-for-help/pchelos/pchelo-kateg.png');
+  width: 845px;
+  height: 443px;
+}
+
+.pchel-rasa {
+  background-image: url('../../../../images/foto-for-help/pchelos/rasa-zapr.png');
+  width: 760px;
+  height: 320px;
+}
+
+.pchelo-redakt {
+  background-image: url('../../../../images/foto-for-help/pchelos/pchel-redakt.png');
+  width: 761px;
+  height: 344px;
+}
+
+.pchelo-spisok-wse {
+  background-image: url('../../../../images/foto-for-help/pchelos/pchelo-spisok-wse.png');
+  width: 1155px;
+  height: 275px;
+}
+
+.pchelo-shifr {
+  background-image: url('../../../../images/foto-for-help/pchelos/pchelo-shifr.png');
+  width: 779px;
+  height: 339px;
+}
+
+
+
+
+

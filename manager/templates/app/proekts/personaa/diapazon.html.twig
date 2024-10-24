@@ -1,0 +1,48 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}Диапазон{% endblock %}
+
+{% block sidebarr %}
+    {{ include('app/proekts/personaa/side/_sidediapaz.html.twig') }}
+{% endblock %}
+
+{% block menupro %}
+    {{ include('app/proekts/_tabs.html.twig') }}
+
+    {{ include('app/proekts/page_glavas/uchastieGl/_tabs.html.twig') }}
+{% endblock %}
+
+{% block kroxii %}
+    <a href="{{ path('app.proekts.basepro') }}">Главная</a>
+{#    <a href="{{ path('app.proekts.personaa.inform') }}">Инфа о ПерсонНомерах</a>#}
+    <span class="aktiv">Выбор Диапазона</span>
+{% endblock %}
+
+{% block bodyy %}
+
+    <div class="proekts pro-mesto">
+
+        <div class="wstavka nav-teni">
+            Выбираем  персональный номер
+        </div>
+
+        <h2 class="pagee__title ">Подходящий диапазон для ПерсонНомера </h2>
+        <div class="personaa-form">
+            <table class="tabl">
+                <tr>
+                    <td class="td-width">
+                        {{ form_start(form) }}
+                        {{ form_widget(form) }}
+                    </td>
+                    <td class="td-width">
+                        <button type="submit" class="btnn btnn-pers">Смотрим ПерсонНомерА</button>
+
+                        {{ form_end(form) }}
+                    </td>
+                </tr>
+            </table>
+
+
+        </div>
+    </div>
+{% endblock %}

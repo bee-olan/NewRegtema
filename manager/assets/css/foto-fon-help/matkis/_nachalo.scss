@@ -1,0 +1,20 @@
+.foto-nachalo {
+  display: block; // блочная
+  margin: 2rem auto 1.5rem;
+  position: relative; //чтобы бордер не исчезал  под картинкой
+
+  //border: 2px solid $border-foto;
+  border: 2px solid $border-linia-nav ;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+  border-radius: 5px;
+}
+.nachalo-pchelo {
+  background-image: url('../../../images/foto-for-help/pchelo-M.jpg');
+  width: 785px;
+  height: 432px;
+}
+.es-uchastnik {
+  background-image: url('../../../images/foto-for-help/es-uchastnik.png');
+  width: 858px;
+  height: 359px;
+}

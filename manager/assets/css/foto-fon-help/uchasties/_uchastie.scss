@@ -1,0 +1,41 @@
+.foto {
+  display: block; // блочная
+  margin: 2rem auto 1.5rem;
+  position: relative; //чтобы бордер не исчезал  под картинкой
+
+  border: 2px solid $border-foto;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, .25);
+  border-radius: 5%;
+}
+
+.glav-uch {
+  background-image: url('../../../../assets/images/foto-for-help/glav-uch.png');
+  width: 721px;
+  height: 312px;
+}
+
+.persona-f {
+  background-image: url('../../../../assets/images/foto-for-help/persona-f.png');
+  width: 678px;
+  height: 302px;
+}
+
+.mesto-f {
+  background-image: url('../../../../assets/images/foto-for-help/mestoo.png');
+  width: 663px;
+  height: 295px;
+}
+
+.uchastie-f {
+  background-image: url('../../../../assets/images/foto-for-help/uchastie-f.png');
+  width: 769px;
+  height: 268px;
+}
+
+
+.st-uchastie-f {
+  background-image: url('../../../../assets/images/foto-for-help/st-uch-f.png');
+  width: 553px;
+  height: 240px;
+}
+
