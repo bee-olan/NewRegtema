@@ -32,12 +32,51 @@
     font-size: 2rem;
   }
 }
-//20 Пиксели = 1.25 Rem
-//22 Пиксели = 1.375 Rem
-//24 Пиксели = 1.5 Rem
-//26 Пиксели = 1.625 Rem
-// 28 Пиксели = 1.75 Rem.
-//30 Пиксели = 1.875 Rem.
+
+.zagol-teni-44 {
+  text-align: center;
+  font-family: 'Oleo Script', cursive;
+  font-size: 2.75rem;
+  color: transparent; /*это скроет текст*/
+  letter-spacing: 0.1em;
+
+  text-shadow: 1px 1px 5px #ccb44b,
+
+  2px 1px 0 black, 
+  0px -2px 5px rgba(0, 0, 0, 0.15), 
+  0 1px 0 rgba(255, 255, 255, 0.5), 
+  0px -2px 5px rgba(255, 255, 255, 0.07);
+
+  &--px32 {
+    font-size: 2rem;
+  }
+}
+
+.zagol-teni-prof {
+  text-align: center;
+  font-family: 'Oleo Script', cursive;
+  font-size: 1.75rem;
+  color: transparent; /*это скроет текст*/
+  letter-spacing: 0.1em;
+
+  text-shadow: 1px 1px 5px #ccb44b,
+
+  2px 1px 0 black, 
+  0px -2px 5px rgba(0, 0, 0, 0.15), 
+  0 1px 0 rgba(255, 255, 255, 0.5), 
+  0px -2px 5px rgba(255, 255, 255, 0.07);
+}
+
+.col-beloe {
+  color:#afa970;;
+}
+
+//40 Пиксели = 2,5 Rem
+//46 Пиксели = 2.875 Rem
+//38 Пиксели = 2,375 Rem
+//36 Пиксели = 2,25 Rem
+// 34 Пиксели = 2,125 Rem.
+//44 Пиксели = 2.75 Rem.
 //32 Пиксели = 2 Rem.
 
 

@@ -6,7 +6,7 @@
   //border: 2px solid $border-foto;
   border: 2px solid $border-linia-nav ;
   box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .nachalo-pchelo {
   background-image: url('../../../images/foto-for-help/pchelo-M.jpg');
@@ -17,4 +17,27 @@
   background-image: url('../../../images/foto-for-help/es-uchastnik.png');
   width: 858px;
   height: 359px;
+}
+
+.el-m {
+  background-image: url('../../../images/foto-for-help/bse-matki/el-m.png');
+  width: 997px;
+  height: 120px;
+}
+.br-m {
+  background-image: url('../../../images/foto-for-help/bse-matki/br-m.png');
+  width: 997px;
+  height: 120px;
+}
+
+.pc-m {
+  background-image: url('../../../images/foto-for-help/bse-matki/pc-m.png');
+  width: 997px;
+  height: 120px;
+}
+
+.wse-m {
+  background-image: url('../../../images/foto-for-help/bse-matki/wse-m.png');
+  width: 754px;
+  height: 332px;
 }
