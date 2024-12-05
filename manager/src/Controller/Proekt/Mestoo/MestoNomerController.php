@@ -4,14 +4,10 @@ declare(strict_types=1);
 
 namespace App\Controller\Proekt\Mestoo;
 
-use App\Model\Mesto\Entity\InfaMesto\Id;
-use App\Model\Mesto\Entity\InfaMesto\MestoNomerRepository;
 use App\ReadModel\Mesto\InfaMesto\MestoNomerFetcher;
 
 use App\Model\User\Entity\User\User;
 use App\Model\Mesto\UseCase\InfaMesto\Create;
-
-use App\Annotation\Guid;
 
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -46,7 +42,7 @@ class MestoNomerController  extends AbstractController
 
         if ($fetcher->exists($this->getUser()->getId())) {
             $this->addFlash('error', 'Ваш номер места расположения пасеки уже записан в БД');
-            return $this->redirectToRoute('app.proekts.mestos.inform');
+            return $this->redirectToRoute('app.proekts.mestos.infa.infas');
         }
 
         $command = new Create\Command($this->getUser()->getId() );
@@ -55,7 +51,7 @@ class MestoNomerController  extends AbstractController
 
             try {
                 $handler->handle($command);
-                return $this->redirectToRoute('app.proekts.mestos.inform');
+                return $this->redirectToRoute('app.proekts.mestos.infa.infas');
             } catch (\DomainException $e) {
                 $this->logger->warning($e->getMessage(), ['exception' => $e]);
                 $this->addFlash('error', $e->getMessage());

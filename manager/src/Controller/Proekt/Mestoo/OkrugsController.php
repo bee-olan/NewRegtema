@@ -6,10 +6,7 @@ namespace App\Controller\Proekt\Mestoo;
 
 use App\ReadModel\Mesto\InfaMesto\MestoNomerFetcher;
 use App\ReadModel\Mesto\OkrugFetcher;
-use Psr\Log\LoggerInterface;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -18,12 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class OkrugsController extends AbstractController
 {
-    private $logger;
 
-    public function __construct(LoggerInterface $logger)
-    {
-        $this->logger = $logger;
-    }
 
     /**
      * @Route("", name="")
@@ -36,7 +28,7 @@ class OkrugsController extends AbstractController
 
         if ($mestonomers->exists($this->getUser()->getId())) {
             $this->addFlash('error', 'Ваш номер места расположения пасеки уже записан в БД');
-            return $this->redirectToRoute('app.proekts.mestos.inform');
+            return $this->redirectToRoute('app.proekts.mestos.infa.infas');
         }
         $okrugs = $fetcher->all();
         return $this->render('app/proekts/mestos/okrugs.html.twig', compact('okrugs'));

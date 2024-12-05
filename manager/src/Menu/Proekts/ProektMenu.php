@@ -70,21 +70,23 @@ class ProektMenu
             ->setLinkAttribute('class', 'nav_pro-link ');
 
         $menu
-            ->addChild('Участие', ['route' => 'app.proekts.page_glavas.uchastieGl'])
+            // ->addChild('Участие', ['route' => 'app.proekts.page_glavas.uchastieGl'])
+            ->addChild('Участие', ['route' => 'app.proekts.pasekas.uchasties.basepro'])
             ->setExtra(
                 'routes',
                 [
-                    ['route' => 'app.proekts.page_glavas.uchastieGl'],
+                    ['route' => 'app.proekts.pasekas.uchasties.basepro'],
                     ['route' => 'app.proekts.pasekas.uchasties.uchastiee'],
                     ['route' => 'app.proekts.pasekas.uchasties.spisok'],
                     ['route' => 'app.proekts.pasekas.uchasties.groupas'],
-                    ['route' => 'app.proekts.personaa'],
+                    // ['route' => 'app.proekts.personaa'],
                     ['route' => 'app.proekts.mestos'],
-//                    ['pattern' => '/^app.proekts.page_glavas.uchastieGl\..+/'],
+                   ['pattern' => '/^app.proekts.pasekas.uchasties.basepro\..+/'],
                     ['pattern' => '/^app.proekts.pasekas.uchasties.uchastiee\..+/'],
                     ['pattern' => '/^app.proekts.pasekas.uchasties.spisok\..+/'],
                     ['pattern' => '/^app.proekts.pasekas.uchasties.groupas\..+/'],
-                    ['pattern' => '/^app.proekts.personaa\..+/'],
+                    ['pattern' => '/^app.proekts.personaa.nomer\..+/'],
+                    ['pattern' => '/^app.proekts.personaa.infa\..+/'],
                     ['pattern' => '/^app.proekts.mestos\..+/']
                 ]
             )
@@ -147,7 +149,7 @@ class ProektMenu
             ->setLinkAttribute('class', 'nav_pro-link nav_pro-link--glav');
 
         $menu
-            ->addChild('Пчело-М', ['route' => 'app.proekts.page_glavas.pchelomatka.show'])
+            ->addChild('Пчело-М', ['route' => 'app.proekts.page_glavas.pchelomatka'])
             ->setExtra(
                 'routes',
                 [
@@ -159,7 +161,7 @@ class ProektMenu
                     ['route' => 'app.proekts.pasekas.pchelomatkas.rasa-pchelos.rasapchelo'],
                     ['route' => 'app.proekts.pasekas.pchelomatkas.rasa-pchelos.comment.rasacr'],
                     ['pattern' => '/^app.proekts.pasekas.pchelomatkas.pchelomatka\..+/'],
-//                    ['pattern' => '/^app.proekts.page_glavas.pchelomatka\..+/'],
+                    ['pattern' => '/^app.proekts.page_glavas.pchelomatka\..+/'],
                     ['pattern' => '/^app.proekts.pasekas.pchelomatkas.rasa-pchelos.rasapchelo\..+/'],
                 ]
             )

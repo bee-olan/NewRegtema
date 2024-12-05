@@ -25,7 +25,7 @@ class GlavMenu
         $menu = $this->factory->createItem('root')
             ->setChildrenAttributes(['class' => 'nav_pro nav_pro-tabs mb-4']);
         $menu
-            ->addChild('БрендМатка', ['route' => 'app.proekts.page_glavas.brendmatka'])
+            ->addChild('Инфа: Бренд-М', ['route' => 'app.proekts.page_glavas.brendmatka'])
             ->setExtra('routes', [
                 ['route' => 'app.proekts.page_glavas.brendmatka'],
 //                ['route' => 'app.proekts.pasekas.matkas'],
@@ -33,6 +33,38 @@ class GlavMenu
             ])
             ->setAttribute('class', 'nav_pro-item')
             ->setLinkAttribute('class', 'nav_pro-link');
+
+        $menu
+            ->addChild('Список', ['route' => 'app.proekts.page_glavas.brendmatka'])
+            ->setAttribute('class', 'nav_pro-item')
+            ->setLinkAttribute('class', 'nav_pro-link');
+
+        $menu
+            ->addChild('Мат-ка: выбор', ['route' => 'app.proekts.page_glavas.brendmatka'])
+            ->setAttribute('class', 'nav_pro-item')
+            ->setLinkAttribute('class', 'nav_pro-link');
+
+        $menu
+            ->addChild('Мат-ка: список', ['route' => 'app.proekts.page_glavas.brendmatka'])
+            ->setAttribute('class', 'nav_pro-item')
+            ->setLinkAttribute('class', 'nav_pro-link');
+
+        $menu
+            ->addChild('Отцовские', ['route' => 'app.proekts.page_glavas.brendmatka'])
+            ->setAttribute('class', 'nav_pro-item')
+            ->setLinkAttribute('class', 'nav_pro-link');
+
+        $menu
+            ->addChild('Регистрация', ['route' => 'app.proekts.page_glavas.brendmatka'])
+            ->setAttribute('class', 'nav_pro-item')
+            ->setLinkAttribute('class', 'nav_pro-link');
+
+        $menu
+            ->addChild('Сезоны', ['route' => 'app.proekts.page_glavas.brendmatka'])
+            ->setAttribute('class', 'nav_pro-item')
+            ->setLinkAttribute('class', 'nav_pro-link');
+
+
 //        $menu
 //            ->addChild('Список Бр-М', ['route' => 'app.proekts.pasekas.matkas'])
 //            ->setExtra('routes', [

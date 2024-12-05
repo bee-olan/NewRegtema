@@ -7,20 +7,15 @@ namespace App\Controller\Proekt\Pasekas\Uchasties\Uchastiee;
 use App\Annotation\Guid;
 
 use App\Model\Adminka\Entity\Uchasties\Uchastie\Id;
-//use App\Model\Adminka\Entity\Uchasties\Uchastie\Uchastie;
 use App\Model\Adminka\UseCase\Uchasties\Uchastie\Create;
 use App\Model\Adminka\Entity\Uchasties\Uchastie\UchastieRepository;
 
-//use App\Model\User\Entity\User\User;
 use App\Model\User\Entity\User\Id as UserId;
 use App\Model\User\Entity\User\UserRepository;
-//use App\ReadModel\Adminka\Matkas\PlemMatka\PlemMatkaFetcher;
 use App\ReadModel\Mesto\InfaMesto\MestoNomerFetcher;
 use App\ReadModel\Adminka\Uchasties\PersonaFetcher;
 use App\ReadModel\Adminka\Uchasties\Uchastie\UchastieFetcher;
-//use App\ReadModel\User\UserFetcher;
 use App\Controller\ErrorHandler;
-//use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -70,7 +65,6 @@ class UchastieControllr extends AbstractController
      * @Route("/create", name=".create")
      * @param Request $request
      * @param UserRepository $users
-//     * @param PlemMatkaFetcher $plemmatkas
      * @param Create\Handler $handler
      * @return Response
      */

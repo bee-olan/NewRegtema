@@ -26,10 +26,10 @@ class GlavMenu
             ->setChildrenAttributes(['class' => 'nav_pro nav_pro-tabs mb-4']);
 
         $menu
-            ->addChild('Инструкция', ['route' => 'app.proekts.page_glavas.pchelomatka.show'])
+            ->addChild('Инфа: Пчело-М ', ['route' => 'app.proekts.page_glavas.pchelomatka'])
             ->setExtra('routes', [
-                ['route' => 'app.proekts.page_glavas.pchelomatka.show'],
-//                ['pattern' => '/^app.proekts.page_glavas.pchelomatka\..+/'],
+                ['route' => 'app.proekts.page_glavas.pchelomatka'],
+                ['pattern' => '/^app.proekts.page_glavas.pchelomatka\..+/'],
             ])
             ->setAttribute('class', 'nav_pro-item')
             ->setLinkAttribute('class', 'nav_pro-link');
@@ -40,7 +40,7 @@ class GlavMenu
                 ['route' => 'app.proekts.pasekas.pchelomatkas'],
                 ['route' => 'app.proekts.pasekas.pchelomatkas.pchelomatka.show'],
                 ['route' => 'app.proekts.pasekas.pchelomatkas.spisoks'],
-                ['route' => 'app.proekts.page_glavas.pchelomatka.spisok-instr'],
+                // ['route' => 'app.proekts.page_glavas.pchelomatka.spisok-instr'],
                 ['pattern' => '/^app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors\..+/'],
 
             ])

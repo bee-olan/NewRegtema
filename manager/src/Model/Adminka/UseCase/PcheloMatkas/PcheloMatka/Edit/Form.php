@@ -18,7 +18,7 @@ class Form extends AbstractType
         $builder
 
             ->add('content', Type\TextareaType::class, array(
-                'label' => 'В БД   внутренняя нумерация или комментарий  - записаны так. Можно изменить!',
+                'label' => 'Комментарий  из БД. Можно изменить!',
 
             ));
     }

@@ -23,7 +23,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/app/proekts/personaa", name="app.proekts.personaa")
+ * @Route("/app/proekts/personaa/nomer", name="app.proekts.personaa.nomer")
  */
 class PersonaaController extends AbstractController
 
@@ -48,7 +48,7 @@ class PersonaaController extends AbstractController
 
         if ($fetcher->exists($this->getUser()->getId() )) {
             $this->addFlash('error', 'Вы уже выбрали ПЕРСОНАЬНЫЙ номер .');
-            return $this->redirectToRoute('app.proekts.personaa.inform');
+            return $this->redirectToRoute('app.proekts.personaa.infa.infas');
         }
         $personas = $fetcher->allPers();
        /// dd($personas);
@@ -65,14 +65,14 @@ class PersonaaController extends AbstractController
 
                 $handler->handle($command);
 
-                return $this->redirectToRoute('app.proekts.personaa',  ['itogo' => $diapazon]);
+                return $this->redirectToRoute('app.proekts.personaa.nomer',  ['itogo' => $diapazon]);
             } catch (\DomainException $e) {
                 $this->errors->handle($e);
                 $this->addFlash('error', $e->getMessage());
             }
         }
 
-        return $this->render('app/proekts/personaa/diapazon.html.twig', [
+        return $this->render('app/proekts/personaa/nomer/diapazon.html.twig', [
             'form' => $form->createView(),
             'personas' => $personas,
         ]);
@@ -129,13 +129,12 @@ class PersonaaController extends AbstractController
 //dd($persons);
 
       //  'personas', 'persons',
-        return $this->render('app/proekts/personaa/index.html.twig',
+        return $this->render('app/proekts/personaa/nomer/index.html.twig',
 				compact(  'personas', 'persons','itogo'));
     }
 
     /**
      * @Route("/{person}{itogo}/create", name=".create")
-//	 * @param User $user
      * @param PersonaFetcher $personas
      * @param int $person
      * @param int $itogo
@@ -146,11 +145,9 @@ class PersonaaController extends AbstractController
     public function create( int $person, int $itogo, Request $request, PersonaFetcher $personas, Create\Handler $handler): Response
     {
 
-        //dd($this->getUser()->getId());
-
         if ($personas->exists($this->getUser()->getId())) {
             $this->addFlash('error', 'ПЕРСОНАЬНЫЙ номер уже существует..');
-            return $this->redirectToRoute('app.proekts.personaa.inform', ['person' => $person]);
+            return $this->redirectToRoute('app.proekts.personaa.infa.infas', ['person' => $person]);
         }
 
 
@@ -164,14 +161,14 @@ class PersonaaController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             try {
                 $handler->handle($command);
-                return $this->redirectToRoute('app.proekts.personaa.inform');
+                return $this->redirectToRoute('app.proekts.personaa.infa.infas');
             } catch (\DomainException $e) {
                 $this->errors->handle($e);
                 $this->addFlash('error', $e->getMessage());
             }
         }
 
-        return $this->render('app/proekts/personaa/create.html.twig', [
+        return $this->render('app/proekts/personaa/nomer/create.html.twig', [
             'form' => $form->createView(),
             'person' => $person,
             'itogo' =>  $itogo,

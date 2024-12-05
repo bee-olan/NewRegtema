@@ -25,30 +25,32 @@ class GlavMenu
         $menu = $this->factory->createItem('root')
             ->setChildrenAttributes(['class' => 'nav_pro nav_pro-tabs mb-4']);
 
-        $menu
-            ->addChild('Участие', ['route' => 'app.proekts.page_glavas.uchastieGl'])
+            $menu
+            ->addChild('Инфа в картинках', ['route' => 'app.proekts.pasekas.uchasties.basepro'])
             ->setExtra('routes', [
+                ['route' => 'app.proekts.pasekas.uchasties.basepro'],
                 ['route' => 'app.proekts.page_glavas.uchastieGl'],
-                ['route' => 'app.proekts.personaa.create'],
-//                ['route' => 'app.proekts.mestos.okrugs'],
+                // ['route' => 'app.proekts.personaa.create'],
+                // ['route' => 'app.proekts.personaa.inform'],
                 ['pattern' => '/^app.proekts.page_glavas.uchastieGl\..+/'],
-                ['pattern' => '/^app.proekts.personaa.create\..+/'],
-//                ['pattern' => '/^app.proekts.mestos.okrugs\..+/']
+                // ['pattern' => '/^app.proekts.personaa.create\..+/'],
+                // ['pattern' => '/^app.proekts.personaa.infa\..+/'],
             ])
             ->setAttribute('class', 'nav_pro-item')
             ->setLinkAttribute('class', 'nav_pro-link');
 
         $menu
-            ->addChild('ПерсонНомер', ['route' => 'app.proekts.personaa.diapazon'])
+            ->addChild('ПерсонНомер', ['route' => 'app.proekts.personaa.infa.infas'])
             ->setExtra('routes', [
-                ['route' => 'app.proekts.personaa'],
-                ['pattern' => '/^app.proekts.personaa\..+/']
+                ['route' => 'app.proekts.personaa.infa.infas'],
+                ['pattern' => '/^app.proekts.personaa.infa\..+/'],
+                ['pattern' => '/^app.proekts.personaa.nomer\..+/'],
             ])
             ->setAttribute('class', 'nav_pro-item')
             ->setLinkAttribute('class', 'nav_pro-link');
 
-        $menu
-            ->addChild('Место', ['route' => 'app.proekts.mestos.okrugs'])
+            $menu
+            ->addChild('НомерМеста', ['route' => 'app.proekts.mestos.infa.infas'])
             ->setExtra('routes', [
                 ['route' => 'app.proekts.mestos'],
                 ['pattern' => '/^app.proekts.mestos\..+/']
@@ -57,7 +59,7 @@ class GlavMenu
             ->setLinkAttribute('class', 'nav_pro-link');
 
         $menu
-            ->addChild('Стать участником.', ['route' => 'app.proekts.pasekas.uchasties.uchastiee'])
+            ->addChild('Стать участником.', ['route' => 'app.proekts.pasekas.uchasties.uchastiee.infa.inform'])
             ->setExtra('routes', [
                 ['route' => 'app.proekts.pasekas.uchasties.uchastiee'],
                 ['pattern' => '/^app.proekts.pasekas.uchasties.uchastiee\..+/']

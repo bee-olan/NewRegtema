@@ -22,6 +22,15 @@ use Symfony\Component\Routing\Annotation\Route;
 class GlavMenuController extends AbstractController
 {
 
+       /**
+     * @Route("", name="")
+     * @return Response
+     */
+    public function index(): Response
+    {
+        return $this->render('app/proekts/page_glavas/pchelomatka/index.html.twig');
+    }
+
     /**
      * @Route("/show", name=".show")
      * @return Response

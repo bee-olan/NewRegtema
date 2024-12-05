@@ -46,6 +46,23 @@ class UchastieFetcher
 
         return $stmt->fetchAll(\PDO::FETCH_KEY_PAIR);
     }
+
+    public function allNike(): array
+    {
+        $stmt = $this->connection->createQueryBuilder()
+            ->select(
+                'id',
+                'nike'
+                // ,
+                // '(SELECT COUNT(*) FROM sait_u4astniks_u4astniks m WHERE m.godd_id = g.id) AS u4astniks'
+            )
+            ->from('admin_uchasties_uchasties')
+            ->orderBy('nike')
+            ->execute();
+
+        return $stmt->fetchAll(FetchMode::ASSOCIATIVE);
+    }
+
     /**
      * @param Filter $filter
      * @param int $page

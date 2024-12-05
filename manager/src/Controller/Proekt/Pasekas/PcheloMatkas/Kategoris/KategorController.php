@@ -16,13 +16,13 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("app/proekts/pasekas/pchelomatkas/kategoris/kategor", name="app.proekts.pasekas.pchelomatkas.kategoris.kategor")
+ * @Route("app/proekts/pasekas/pchelomatkas/kategoris", name="app.proekts.pasekas.pchelomatkas.kategoris")
  */
 class KategorController extends AbstractController
 {
  
     /**
-     * @Route("/", name="")
+     * @Route("/kategor", name=".kategor")
      * @param Request $request
      * @param KategoriaFetcher $kategoria
      * @return Response
@@ -36,4 +36,14 @@ class KategorController extends AbstractController
             compact('kategorias', 'permissions') );
     }
 
+     /**
+     * @Route("/infa", name=".infa")
+     * @param Request $request
+     * @return Response
+     */
+    public function infa(): Response
+    {
+       
+        return $this->render('/app/proekts/pasekas/pchelomatkas/kategoris/infa.html.twig' );
+    }
 }

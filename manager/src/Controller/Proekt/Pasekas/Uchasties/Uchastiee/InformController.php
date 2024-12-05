@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Controller\Proekt\Mestoo;
+namespace App\Controller\Proekt\Pasekas\Uchasties\Uchastiee;
 
 use App\ReadModel\User\UserFetcher;
-use App\ReadModel\Mesto\InfaMesto\MestoNomerFetcher;
+use App\ReadModel\Adminka\Uchasties\Uchastie\UchastieFetcher;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 
 /**
- * @Route("/app/proekts/mestos/infa", name="app.proekts.mestos.infa")
+ * @Route("/app/proekts/pasekas/uchasties/uchastiee/infa", name="app.proekts.pasekas.uchasties.uchastiee.infa")
  */
 class InformController extends AbstractController
 {
@@ -25,29 +25,30 @@ class InformController extends AbstractController
     public function inform(): Response
     {
 
-        return $this->render('app/proekts/mestos/infa/inform.html.twig');
+        return $this->render('app/proekts/pasekas/uchasties/uchastiee/infa/inform.html.twig');
     }
+
 	/**
      * @Route("/infas", name=".infas")
      * @return Response
-     * @param MestoNomerFetcher $fetchers
+     * @param UchastieFetcher $fetchers
      * @param UserFetcher $users
      */
-    public function infas(MestoNomerFetcher $fetchers, UserFetcher $users): Response
+    public function infas(UchastieFetcher $fetchers, UserFetcher $users): Response
     {
        
 // dd($this->getUser());
         $user = $users->get($this->getUser()->getId());
         $last = $user->getName()->getLast();
-        $fetcher = $fetchers->allMestNom();
+        $fetcher = $fetchers->allNike();
 
         //$mestonomer = $mestonomers ->get(new Id($this->getUser()->getId()));
 
-        $mestonomer = $fetchers ->find($this->getUser()->getId());
+        $uchastie = $fetchers ->find($this->getUser()->getId());
 
 
-        return $this->render('/app/proekts/mestos/infa/infas.html.twig',
-                                compact('fetcher', 'mestonomer', 'last'));
+        return $this->render('/app/proekts/pasekas/uchasties/uchastiee/infa/infas.html.twig',
+                                compact('fetcher', 'uchastie', 'last'));
     }
 
 }
