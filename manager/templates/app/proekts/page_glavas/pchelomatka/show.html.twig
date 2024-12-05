@@ -9,8 +9,9 @@
 {% endblock %}
 
 {% block kroxii %}
-    <a href="{{ path('proekt') }}">Главная</a>
-    <span class="aktiv ">Что делать или с чего начать ...</span>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka') }}"> Инструкции.</a>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.spisok-instr') }}"> После регистрации матки.</a>
+    <span class="aktiv ">Перед регистрацией матки.</span>
 {% endblock %}
 
 {% block bodyy %}
@@ -19,7 +20,7 @@
         <div class="inklud inklud--pchelomat ">
 
             <div class="pchelo-title  pchelo-teni ">
-                Инструкция в картинках &nbsp;
+                <span class="col-kras">Перед </span> Перед регистрацией матки &nbsp;
             </div>
         </div>
         <div class="proekts-plr  ">

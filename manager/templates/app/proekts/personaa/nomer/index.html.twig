@@ -13,10 +13,10 @@
 {% endblock %}
 
 {% block kroxii %}
-    <a href="{{ path('app.proekts.basepro') }}">Главная</a>
+    <a href="{{ path('app.proekts.personaa.infa.inform') }}">Инфа:  ПерсонНомер</a>
     {#    <span class="aktiv">ПерсонНомер</span>#}
     {#    <a href="{{ path('app.proekts.personaa.inform') }}">Инфа о ПерсонНомерах</a>#}
-    <a href="{{ path('app.proekts.personaa.diapazon') }}">Выбор Диапазона</a>
+    <a href="{{ path('app.proekts.personaa.nomer.diapazon') }}">Выбор Диапазона</a>
     <span class="aktiv">Выбор ПерсонНомера</span>
 
 {% endblock %}
@@ -25,18 +25,18 @@
 
     <div class="proekts pro-mesto">
 
-        <div class="wstavka nav-teni">
-            Выбираем  персональный номер
+        <div class="wstavka pchelo-teni">
+            Выбираем  ПерсонНомер
         </div>
 
-        <h2 class="pagee__title ">Для выбора ПерсонНомера участника - жмите на выбранную цифру</h2>
+        <h2 class="pagee__title ">Для выбора ПерсонНомера участника - жмите на нужную цифру</h2>
 
         <div class="proekts-plr">
             <div class="ramka">
 
                 {% for person in persons %}
                     <div class="personaa-vibor">
-                        <a href="{{ path('app.proekts.personaa.create', { 'person': person, 'itogo': itogo}) }}">
+                        <a href="{{ path('app.proekts.personaa.nomer.create', { 'person': person, 'itogo': itogo}) }}">
                             {{ person }}
                         </a>
                     </div>
@@ -47,7 +47,7 @@
 
         <div class="personaa">
             <h2 class="personaa__title ">Если выбрали не тот диапазон - можно </h2>
-            <a href="{{ path('app.proekts.personaa.diapazon') }}" class="btnn btnn-pers ">
+            <a href="{{ path('app.proekts.personaa.nomer.diapazon') }}" class="btnn btnn-pers ">
                 Изменить диапазон
             </a>
         </div>

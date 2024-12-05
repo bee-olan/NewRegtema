@@ -13,10 +13,9 @@
 {% endblock %}
 
 {% block kroxii %}
-    <a href="{{ path('app.proekts.basepro') }}">Главная</a>
-    <a href="{{ path('app.proekts.mestos.inform') }}">Информация</a>
-    <a href="{{ path('app.proekts.mestos.okrugs') }}">Место</a>
-    <a href="{{ path('app.proekts.mestos.okrugs', {'okrug_id': okrug.id} ) }}">Номера Округов</a>
+    <a href="{{ path('app.proekts.mestos.infa.inform') }}">Инфа: НомерМеста</a>
+    <a href="{{ path('app.proekts.mestos.infa.infas') }}">Инфа: Все НомераМест</a>
+    <a href="{{ path('app.proekts.mestos.okrugs', {'okrug_id': okrug.id} ) }}">Округа</a>
     <span class="aktiv">Номера Регионов/Областей</span>
 {% endblock %}
 
@@ -26,8 +25,8 @@
     <div class="proekts pro-mesto">
 
         <div class="wstavka">
-            <div class=" nav-teni">
-                Место расположения пасеки: Регион/Область
+            <div class=" pchelo-teni">
+              Номер Региона/Области для  пасеки
             </div>
         </div>
 

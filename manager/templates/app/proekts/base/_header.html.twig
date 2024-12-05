@@ -1,10 +1,11 @@
 <header class="header  ">
     {#    teni  teni--size-2#}
     <div class="header__left">
-        <nav class="nav ">
+        <nav class="nav "> 
             <ul class="nav__list ">
-                <li class="nav__item ">
-                    <a class="nav__link has-subnav  nav-teni" href="/app/proekts/basepro">Главная </a>
+                <li class="nav__link nav-teni">
+                    Региональный тест маток
+                    {# <a class="nav__link has-subnav  nav-teni" href="/app/proekts/basepro">Главная </a> #}
                                         <ul class="subnav">
                                             <li>
                                                 <a class="subnav__link" href="{{ path('app.proekts.mestos.okrugs') }}">
@@ -20,7 +21,7 @@
                     {#                            <a class="subnav__link" href="{{ path('app.proekts.personaa.diapazon') }}">Выбор#}
                     {#                                ПерсонНомера</a>#}
                     {#                        </li>#}
-                                        </ul>
+                                        {# </ul> #}
                 </li>
 
                 {#======================================#}
@@ -101,6 +102,16 @@
 
 
     </div>
-
-
+    <div class="headerr__right  ">
+		<nav class="nav  ">
+			<ul class="nav__list  zagol-teni-prof">
+				<li class="nav__item  header-right-bor ">
+					<a class="nav__link col-beloe" href="#">Профиль</a>
+				</li>
+				<li class="nav__item">
+                 <a class="nav__link" href="#">войти</a>
+            	</li> 
+			</ul>
+		</nav>
+    </div>
 </header>

@@ -12,11 +12,11 @@
 {% endblock %}
 
 {% block kroxii %}
-    <a href="{{ path('app.proekts.basepro') }}">Главная</a>
+    <a href="{{ path('app.proekts.personaa.infa.inform') }}">Инфа:  ПерсонНомер</a>
 {#    <span class="aktiv">ПерсонНомер</span>#}
 {#    <a href="{{ path('app.proekts.personaa.inform') }}">Инфа о ПерсонНомерах</a>#}
-    <a href="{{ path('app.proekts.personaa.diapazon') }}">Выбор Диапазона</a>
-    <a href="{{ path('app.proekts.personaa', { 'itogo': itogo}) }}">ПерсонНомера</a>
+    <a href="{{ path('app.proekts.personaa.nomer.diapazon') }}">Выбор Диапазона</a>
+    <a href="{{ path('app.proekts.personaa.nomer', { 'itogo': itogo}) }}">ПерсонНомера</a>
     <span class="aktiv">Сохранить в БД</span>
 
 {% endblock %}
@@ -25,8 +25,8 @@
 
     <div class="proekts pro-mesto">
 
-        <div class="wstavka nav-teni">
-            Выбираем  персональный номер
+        <div class="wstavka pchelo-teni">
+            Сохранить  ПерсонНомер
         </div>
 
         <div class="personaa-ramka">
@@ -43,7 +43,7 @@
         <div class="mestoo__linia-top"></div>
         <div class="personaa">
             <h2 class="pagee__title "> Если ошиблись - вернитель на страничку
-                <a class="btnn btnn-pers" href="{{ path('app.proekts.personaa', { 'itogo': itogo} ) }}">
+                <a class="btnn btnn-pers" href="{{ path('app.proekts.personaa.nomer', { 'itogo': itogo} ) }}">
                     <span class="strongo"> ПерсонНомера</span>
                 </a>
             </h2>

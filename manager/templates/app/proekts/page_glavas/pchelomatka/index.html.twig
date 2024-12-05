@@ -8,12 +8,37 @@
     {{ include('app/proekts/page_glavas/pchelomatka/_tabs.html.twig') }}
 {% endblock %}
 
-{#{% block kroxii %}#}
-{#    <a href="{{ path('app.proekts.basepro') }}">Главная iii</a>#}
-{#    <span class="aktiv ">ПчелоМатки</span>#}
-{#{% endblock %}#}
+{% block kroxii %}
+    <span class="aktiv ">Выбор инфы.</span>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.show') }}">Инфа: перед регистрацией матки.</a>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.spisok-instr') }}">Инфа: после регистрации матки.</a>
+
+{% endblock %}
 
 {% block bodyy %}
+    <div class="ma-bo-2 ma-ri-8">
+        <h2 class="zagol-teni-44 ">
+            Что и как делать:
+            <p> основные <span class="col-kras">моменты </span> в картинках</p>
+        </h2>
+    </div>
 
-    Это ПчелоМатка. Тут будет что-то важное в картинках
+    <div class="ma-bo-2">
+        <span class="zagol-teni-44 zagol-teni-44--px32">
+            <a href="{{ path('app.proekts.page_glavas.pchelomatka.show') }}">
+             1)   <span class="col-kras">Перед </span>   регистрацией матки. .
+             </a>
+        </span>
+    </div>
+
+    <div>
+        <span class="zagol-teni-44 zagol-teni-44--px32">
+            <a href="{{ path('app.proekts.page_glavas.pchelomatka.spisok-instr') }}">
+              2)  <span class="col-kras">После </span>  регистрации матки.
+            </a>
+        </span>
+    </div>
+
+
+
 {% endblock %}

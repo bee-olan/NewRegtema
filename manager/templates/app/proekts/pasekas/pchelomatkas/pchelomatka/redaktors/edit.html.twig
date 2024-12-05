@@ -8,14 +8,11 @@
     {{ include('app/proekts/page_glavas/pchelomatka/_tabs.html.twig') }}
 {% endblock %}
 
-{#   {% block kroxii %}#}
-{#       <a href="{{ path('app.proekts.pasekas.matkas') }}">Список БрендМаток</a>#}
-{#       <span class="aktiv ">{{ plemmatka.title }}</span>#}
-{#       <a href="{{ path('app.proekts.pasekas.matkas.plemmatkas.redaktorss.show', {'plemmatka_id': plemmatka.id}) }}">#}
-{#           Добавить сезон. Редактировать. Архив#}
-{#       </a>#}
-{#       <span class="aktiv "> Редактировать</span>#}
-{#   {% endblock %}#}
+{% block kroxii %}
+    <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.instr') }}">Все переходы (инстр).</a>
+    <a href="{{ path('app.proekts.pasekas.pchelomatkas.spisoks') }}">Добавить сезон . Статус</a>
+    <span class="aktiv ">Все переходы.</span>
+{% endblock %}
 
 {% block bodyy %}
 
@@ -23,13 +20,17 @@
 
         <div class="inklud inklud--pchelomat ">
 
+            <div class="ma-le_6">
+                <div class="drevimg "></div>
+            </div>
+
             <div class="pchelo-title  pchelo-teni ">
             Редактировать комментарий у Пчело-Матки
         </div> 
     </div>
 
     <div class="proekts-plr  ">
-    <h1 class="elit-titul  ">Отредактировать  комментарий.</h1>
+    {# <h1 class="elit-titul  ">Отредактировать  комментарий.</h1> #}
         <div class="plem-form__header  "> 
             <div class="plem-form ">
                 {{ form_start(form) }}

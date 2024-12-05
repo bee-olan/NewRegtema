@@ -9,12 +9,10 @@
 
 
 {% block kroxii %}
-    <a href="{{ path('app.proekts.basepro') }}">Главная</a>
-    <span class="aktiv ">Участие</span>
-    <a href="{{ path('app.proekts.personaa.inform') }}">ПерсонНомер</a>
-    <a href="{{ path('app.proekts.mestos.inform') }}">Инфа место</a>
-    <a href="{{ path('app.proekts.pasekas.uchasties.groupas') }}">Группы</a>
-    <a href="{{ path('app.proekts.pasekas.uchasties.spisok') }}">Список Участников</a>
+      
+    <a href="{{ path('app.proekts.pasekas.uchasties.uchastiee.infa.inform') }}">Инфа: Стать участником (картинки)</a>
+    <a href="{{ path('app.proekts.pasekas.uchasties.uchastiee.infa.infas') }}">Инфа: Все Участники</a>
+
     <span class="aktiv">Стать участником</span>
 {% endblock %}
 
@@ -23,11 +21,11 @@
 {% endblock %}
 
 {% block bodyy %}
-    {#    #}
+    
     <div class="proekts pro-uhastiee">
 
-        <div class="wstavka nav-teni">
-            Участие в проекте. Дополнительные данные
+        <div class="wstavka  pchelo-teni ">
+           Дополнительные данные. Стать участником. 
         </div>
 
 
@@ -37,8 +35,8 @@
                 <h2 class="pagee__title "><strong class="strongo--name-nike"> {{ uchastie.name.full }} </strong> ,
                     Вы зарегистрированны в проекте </h2>
             {% else %}
-                <h2 class="pagee__title "> Чтобы стать участником проекта, нужно последовательно заполнить пункты 1 -
-                    3 </h2>
+                <h2 class="pagee__title "> Чтобы стать участником проекта, нужно 
+                 заполнить пункты 1 - 3 </h2>
             {% endif %}
 
             <ul class="uchastiee__data">
@@ -62,7 +60,7 @@
                         номер
                     </li>
                     <li>
-                        <a href="{{ path('app.proekts.personaa.diapazon') }}"
+                        <a href="{{ path('app.proekts.personaa.nomer.diapazon') }}"
                            class="btnn ma-to-2 btnn-uchas"> Выбрать ПерсонНомер
                         </a>
                     </li>

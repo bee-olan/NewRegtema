@@ -8,22 +8,28 @@
 
 {% block menupro %}
     {{ include('app/proekts/_tabs.html.twig') }}
-
     {{ include('app/proekts/page_glavas/uchastieGl/_tabs.html.twig') }}
 {% endblock %}
 
+
+
 {% block kroxii %}
-    <a href="{{ path('app.proekts.basepro') }}">Главная</a>
-{#    <a href="{{ path('app.proekts.personaa.inform') }}">Инфа о ПерсонНомерах</a>#}
-    <span class="aktiv">Выбор Диапазона</span>
+    <a href="{{ path('app.proekts.personaa.infa.inform') }}">Инфа:  ПерсонНомер</a>
+    <a href="{{ path('app.proekts.personaa.infa.infas') }}">Инфа: Все ПерсонНомера</a>
+
+    <span class="aktiv">Выбрать ПерсонНомер</span> 
 {% endblock %}
 
 {% block bodyy %}
+{# 
+    <div class="proekts pro-uhastiee">
+
+        <div class="wstavka  pchelo-teni "> #}
 
     <div class="proekts pro-mesto">
 
-        <div class="wstavka nav-teni">
-            Выбираем  персональный номер
+        <div class="wstavka pchelo-teni">
+           Выбор Диапазона. Персональный номер
         </div>
 
         <h2 class="pagee__title ">Подходящий диапазон для ПерсонНомера </h2>

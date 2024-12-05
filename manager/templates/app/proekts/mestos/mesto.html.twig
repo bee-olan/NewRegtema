@@ -13,14 +13,14 @@
 {% endblock %}
 
 {% block kroxii %}
-    <a href="{{ path('app.proekts.basepro') }}">Главная</a>
-    <a href="{{ path('app.proekts.mestos.inform') }}">Информация</a>
-    <a href="{{ path('app.proekts.mestos.okrugs', {'okrug_id': okrug.id} ) }}"> Округ</a>
-    <a href="{{ path('app.proekts.mestos.oblasts', { 'oblast_id': oblast.id, 'okrug_id': okrug.id} ) }}">Регион/Область</a>
+    <a href="{{ path('app.proekts.mestos.infa.inform') }}">Инфа: НомерМеста</a>
+    <a href="{{ path('app.proekts.mestos.infa.infas') }}">Инфа: Все НомераМест</a>
+    <a href="{{ path('app.proekts.mestos.okrugs', {'okrug_id': okrug.id} ) }}"> Округа</a>
+    <a href="{{ path('app.proekts.mestos.oblasts', { 'oblast_id': oblast.id, 'okrug_id': okrug.id} ) }}">Регионы/Области</a>
 
-    <a href="{{ path('app.proekts.mestos.raions', {'raion_id': raion.id, 'oblast_id': oblast.id, 'okrug_id': okrug.id } ) }}">Район</a>
+    <a href="{{ path('app.proekts.mestos.raions', {'raion_id': raion.id, 'oblast_id': oblast.id, 'okrug_id': okrug.id } ) }}">Районы</a>
 
-    <span class="aktiv">Сохранить Номер места </span>
+    <span class="aktiv">Сохранить</span>
 {% endblock %}
 
 
@@ -29,8 +29,8 @@
     <div class="proekts pro-mesto">
 
         <div class="wstavka">
-            <div class="nav-teni">
-                Место расположения пасеки: Сохранить
+            <div class="pchelo-teni">
+                НомерМеста расположения пасеки.
             </div>
         </div>
 

@@ -1,6 +1,6 @@
 {% extends 'probase.html.twig' %}
 
-{% block title %}ПлемМатка{% endblock %}
+{% block title %}Участие{% endblock %}
 
 {% block menupro %}
     {{ include('app/proekts/_tabs.html.twig') }}
@@ -8,8 +8,12 @@
 {% endblock %}
 
 {% block kroxii %}
-    <a href="{{ path('app.proekts.basepro') }}">Главная</a>
-    <span class="aktiv ">Что делать или с чего начать ...</span>
+    <a href="{{ path('app.proekts.page_glavas.uchastieGl') }}">Инфа: Стать участником</a>
+    <a href="{{ path('app.proekts.personaa.infa.inform') }}">Инфа:  ПерсонНомер</a>
+    <a href="{{ path('app.proekts.mestos.inform') }}">Инфа: Место рас-ния</a>
+    {# <a href="{{ path('app.proekts.pasekas.uchasties.groupas') }}">Группы</a>
+    <a href="{{ path('app.proekts.pasekas.uchasties.spisok') }}">Список Участников</a> #}
+    <span class="aktiv">Инфа в картинках для раздела: Участие </span>
 {% endblock %}
 
 {% block bodyy %}
@@ -58,14 +62,14 @@
         </ul>
         <ul class="mestoo__title">
             <li class="mestoo__title-item mestoo__nomer-red">
-                <a href="{{ path('app.proekts.personaa.diapazon') }}">3. </a>
+                <a href="{{ path('app.proekts.personaa.nomer.diapazon') }}">3. </a>
             </li>
             <li class="mestoo__title-item mestoo__nomer">
-                <a href="{{ path('app.proekts.personaa.diapazon') }}">Выбрать персональный номер </a>
+                <a href="{{ path('app.proekts.personaa.nomer.diapazon') }}">Выбрать персональный номер </a>
             </li>
 
             <li class="mestoo__title-item ">
-                <a href="{{ path('app.proekts.personaa.diapazon') }}">
+                <a href="{{ path('app.proekts.personaa.nomer.diapazon') }}">
                     <div class="foto persona-f"></div>
                 </a>
             </li>

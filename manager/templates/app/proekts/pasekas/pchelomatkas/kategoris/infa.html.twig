@@ -1,0 +1,71 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}Категории{% endblock %}
+
+
+{% block menupro %}
+    {{ include('app/proekts/_tabs.html.twig') }}
+    {{ include('app/proekts/page_glavas/pchelomatka/_tabs.html.twig') }}
+{% endblock %}
+
+{% block kroxii %}
+    {# <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.show', {'pchelomatka_id': pchelomatka.id} )  }}">
+        Добавить сезон . Статус</a> #}
+    <span class="aktiv ">Новая категория (Ин-фа).</span>
+{% endblock %}
+
+{% block bodyy %}
+    <div class=" proekts ">
+
+        <div class="inklud inklud--pchelomat ">
+
+            <div class="pchelo-title  pchelo-teni ">
+                Новая категория. Написать запрос &nbsp; &nbsp;
+            </div>
+        </div>
+        <div class="proekts-plr  ">
+
+            <ul >
+                <li>
+                     
+                    1) Обозначение категории.
+                    
+                 </li>
+                <li>     
+                   Придумайте сокращенное название категории и напишите расшифровку.    
+                </li> 
+                <li >   
+                Пример: м / с --- местная / селекционная
+            </li>       
+            </ul>
+            <ul class="mestoo__title">
+                   
+            </ul>
+
+
+
+
+            <ul class="mestoo__title">
+                <li class="mestoo__title-item mestoo__nomer"   >
+                    2)Характеристики категорий
+                </li>
+
+                <li class="mestoo__title-item mestoo__nomer">
+                    Перчислите нужные характеристики
+                </li>           
+            </ul>
+            <ul class="mestoo__title">
+                <li class="mestoo__title-item mestoo__nomer"   >
+                    3)
+                </li>
+
+                <li class="mestoo__title-item mestoo__nomer">
+                    <a href="{{ path('app.proekts.pasekas.pchelomatkas.kategoris.kategor') }}"> 
+                     Напишите и отправьте запрос
+                    </a>
+                </li>           
+            </ul>
+
+        </div>
+    </div>
+{% endblock %}

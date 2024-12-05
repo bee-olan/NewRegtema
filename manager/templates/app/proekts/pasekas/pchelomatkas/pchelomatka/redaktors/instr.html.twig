@@ -1,0 +1,65 @@
+{% extends 'probase.html.twig' %}
+
+{% block title %}ПчелоМатка{% endblock %}
+
+
+{% block menupro %}
+    {{ include('app/proekts/_tabs.html.twig') }}
+    {{ include('app/proekts/page_glavas/pchelomatka/_tabs.html.twig') }}
+{% endblock %}
+
+{% block kroxii %}
+    {# <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.show', {'pchelomatka_id': pchelomatka.id} )  }}"> #}
+        Добавить сезон . Статус</a>
+    <span class="aktiv ">Все переходы.</span>
+{% endblock %}
+
+{% block bodyy %}
+    <div class=" proekts ">
+
+        <div class="inklud inklud--pchelomat ">
+
+            <div class="pchelo-title  pchelo-teni ">
+                Работа с конкретной маткой.  Все переходы&nbsp; &nbsp;
+            </div>
+        </div>
+        <div class="proekts-plr  ">
+
+            <ul class="mestoo__title">
+
+                <li class="mestoo__title-item mestoo__nomer"   >
+                    1)
+                </li>
+
+                <li class="mestoo__title-item mestoo__nomer">
+                    <a href="{{ path('app.proekts.pasekas.pchelomatkas.kategoris.kategor') }}"> 
+                     - Редактировать комментарий 
+                    </a>
+                </li>           
+            </ul>
+            <ul class="mestoo__title">
+                <li class="mestoo__title-item mestoo__nomer"   >
+                    2)
+                </li>
+
+                <li class="mestoo__title-item mestoo__nomer">
+                    <a href="{{ path('app.proekts.pasekas.pchelomatkas.kategoris.kategor') }}"> 
+                     Изменить статус 
+                    </a>
+                </li>           
+            </ul>
+            <ul class="mestoo__title">
+                <li class="mestoo__title-item mestoo__nomer"   >
+                    3)
+                </li>
+
+                <li class="mestoo__title-item mestoo__nomer">
+                    <a href="{{ path('app.proekts.pasekas.pchelomatkas.kategoris.kategor') }}"> 
+                     Добавить сезон 
+                    </a>
+                </li>           
+            </ul>
+
+        </div>
+    </div>
+{% endblock %}
