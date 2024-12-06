@@ -9,8 +9,10 @@
 {% endblock %}
 
 {% block kroxii %}
-    <a href="{{ path('app.proekts.pasekas.pchelomatkas.kategoris.kategor') }}">Категории</a>
-    <span class="aktiv ">Написать запрос на новую категорию</span>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.show') }}">Инфа: перед регистрацией.</a>
+    <a href="{{ path('app.proekts.pasekas.pchelomatkas.kategoris.infa') }}">Инфа: Новая категория.</a>
+    <a href="{{ path('app.proekts.pasekas.pchelomatkas.kategoris.kategor') }}">Обзор категорий..</a>
+    <span class="aktiv ">Написать запрос </span>
 {% endblock %}
 
 {% block bodyy %}
@@ -46,6 +48,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="ma-bo-1 col-kras pchelo-titul">
+                Отправленные запросы
             </div>
             <div class="proekts proekts--rasa">
                 <div class="proekts-plr  ">
@@ -85,7 +90,7 @@
                                                                 <div class="delit-kar"></div> 
                                                             </button>
                                                         </form>
-                                                        <span class="itall ma-le-26 direct-chat-timestamp "> Ответ обязательно будет </span>
+                                                        <span class="itall ma-le-26  col-kras"> Ответ обязательно будет </span>
                                                         
                                                     </div>
                                                 {% endif %}

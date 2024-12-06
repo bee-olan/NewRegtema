@@ -4,12 +4,6 @@ declare(strict_types=1);
 
 namespace App\Controller\Proekt\PageGlavas\PcheloMatkas;
 
-//use App\Model\Adminka\Entity\Uchasties\Personas\PersonaRepository;
-//use App\Model\Adminka\Entity\Uchasties\Personas\Id as PersonaId;
-//use App\Model\Adminka\Entity\Uchasties\Uchastie\Id;
-//use App\Model\Adminka\Entity\Uchasties\Uchastie\UchastieRepository;
-//use App\Model\Mesto\Entity\InfaMesto\MestoNomerRepository;
-//use App\Model\Mesto\Entity\InfaMesto\Id as MestoNomerId;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -47,5 +41,14 @@ class GlavMenuController extends AbstractController
     public function spisok(): Response
     {
         return $this->render('app/proekts/page_glavas/pchelomatka/spisok-instr.html.twig');
+    }
+
+    /**
+     * @Route("/reg-infa", name=".reg-infa")
+     * @return Response
+     */
+    public function reginfa(): Response
+    {
+        return $this->render('app/proekts/page_glavas/pchelomatka/reg-infa.html.twig');
     }
 }

@@ -9,63 +9,84 @@
 {% endblock %}
 
 {% block kroxii %}
-    {# <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.show', {'pchelomatka_id': pchelomatka.id} )  }}">
-        Добавить сезон . Статус</a> #}
-    <span class="aktiv ">Новая категория (Ин-фа).</span>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.show') }}">Инфа: перед регистрацией матки.</a>
+    <span class="aktiv ">Инфа: Новая категория.</span>
+    <a href="{{ path('app.proekts.pasekas.pchelomatkas.kategoris.kategor') }}">Обзор категорий.</a>
+
 {% endblock %}
 
 {% block bodyy %}
-    <div class=" proekts ">
+    <div class=" proekts pro-pchelomat">
 
         <div class="inklud inklud--pchelomat ">
 
             <div class="pchelo-title  pchelo-teni ">
-                Новая категория. Написать запрос &nbsp; &nbsp;
+                Инфа: Новая категория.&nbsp; &nbsp;
             </div>
         </div>
         <div class="proekts-plr  ">
 
-            <ul >
-                <li>
-                     
-                    1) Обозначение категории.
-                    
+            <ul class=" ma-bo-2  pchelo-titul">
+                <li >
+                        <span class=" col-kras"> 1)</span>   Обозначение категории:
+                </li>
+                <li  class=" ">
+                     <div class="ma-le_6">
+                         <span class=" col-kras"> - </span> придумайте сокращенное название категории
+                         <span class=" col-kras">:  м / пр </span>
+                    </div>
                  </li>
-                <li>     
-                   Придумайте сокращенное название категории и напишите расшифровку.    
-                </li> 
-                <li >   
-                Пример: м / с --- местная / селекционная
-            </li>       
+                <li  class=" ">
+                    <div class="ma-le_6">
+                        <span class=" col-kras"> - </span> напишите расшифровку
+                        <span class=" col-kras">:  мой / пример </span>
+                    </div>
+                </li>
             </ul>
-            <ul class="mestoo__title">
-                   
-            </ul>
-
-
-
-
-            <ul class="mestoo__title">
-                <li class="mestoo__title-item mestoo__nomer"   >
-                    2)Характеристики категорий
+            <ul class=" ma-bo-2  pchelo-titul">
+                <li >
+                    <span class=" col-kras"> 2)</span>   Перечислите <span class=" col-kras"> Характеристики  </span>
+                    категорий:
+                </li>
+                <li  >
+                    <div class="ma-le_6">
+                        <span class=" col-kras"> - </span> что-то о матке
+                    </div>
+                </li>
+                <li  >
+                    <div class="ma-le_6">
+                        <span class=" col-kras"> - </span> трутневый фон - он какой?
+                    </div>
+                </li>
+                <li >
+                    <div class="ma-le_6">
+                        <span class=" col-kras"> - </span> что-нибудь о Селекционной работе
+                    </div>
+                </li>
+                <li  >
+                    <div class="ma-le_6">
+                        <span class=" col-kras"> - </span> может быть что-то  о дружелюбии
+                    </div>
                 </li>
 
-                <li class="mestoo__title-item mestoo__nomer">
-                    Перчислите нужные характеристики
-                </li>           
-            </ul>
-            <ul class="mestoo__title">
-                <li class="mestoo__title-item mestoo__nomer"   >
-                    3)
+                <li  >
+                    <div class="ma-le_6">
+                        <span class=" col-kras"> - </span> возможно есть  важное,  о чём еще не было написано
+                    </div>
                 </li>
 
-                <li class="mestoo__title-item mestoo__nomer">
-                    <a href="{{ path('app.proekts.pasekas.pchelomatkas.kategoris.kategor') }}"> 
-                     Напишите и отправьте запрос
-                    </a>
-                </li>           
             </ul>
+
+            <ul class=" ma-bo-2  pchelo-titul">
+                <li >
+                    <span class=" col-kras"> 3)</span>
+                    <a href="{{ path('app.proekts.pasekas.pchelomatkas.kategoris.kategor') }}">Напишите и отправьте запрос.</a>
+
+                </li>
+            </ul>
+
 
         </div>
+        <div class="foto-pchelo kateg-zapr"></div>
     </div>
 {% endblock %}

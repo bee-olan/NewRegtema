@@ -51,7 +51,7 @@ class GlavMenu
             ->addChild('Категории.Трут фон.', ['route' => 'app.proekts.pasekas.pchelomatkas.kategoris.kategor'])
             ->setExtra('routes', [
                 ['route' => 'app.proekts.pasekas.pchelomatkas.kategoris.kategor'],
-                ['pattern' => '/^app.proekts.pasekas.pchelomatkas.kategoris.kategor\..+/']
+                ['pattern' => '/^app.proekts.pasekas.pchelomatkas.kategoris\..+/']
             ])
             ->setAttribute('class', 'nav_pro-item')
             ->setLinkAttribute('class', 'nav_pro-link');
@@ -71,7 +71,8 @@ class GlavMenu
 //            ->addChild('Регистрация.', ['route' => 'app.proekts.pasekas.pchelomatkas.creates.create'])
             ->setExtra('routes', [
                 ['route' => 'app.proekts.pasekas.pchelomatkas.pchelomatka.creates.create'],
-
+//                ['route' => 'app.proekts.page_glavas.pchelomatka.reg-infa'],
+//                ['pattern' => '/^app.proekts.page_glavas.pchelomatka.reg-infa\..+/'],
                 ['pattern' => '/^app.proekts.pasekas.pchelomatkas.pchelomatka.creates\..+/']
             ])
             ->setAttribute('class', 'nav_pro-item')

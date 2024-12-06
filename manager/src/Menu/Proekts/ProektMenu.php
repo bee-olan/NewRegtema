@@ -154,6 +154,7 @@ class ProektMenu
                 'routes',
                 [
                     ['route' => 'app.proekts.page_glavas.pchelomatka.show'],
+                    ['route' => 'app.proekts.page_glavas.pchelomatka.reg-infa'],
                     ['route' => 'app.proekts.page_glavas.pchelomatka'],
                     ['route' => 'app.proekts.pasekas.pchelomatkas.pchelomatka.creates.create'],
                     ['route' => 'app.proekts.pasekas.pchelomatkas.spisoks'],
@@ -161,7 +162,8 @@ class ProektMenu
                     ['route' => 'app.proekts.pasekas.pchelomatkas.rasa-pchelos.rasapchelo'],
                     ['route' => 'app.proekts.pasekas.pchelomatkas.rasa-pchelos.comment.rasacr'],
                     ['pattern' => '/^app.proekts.pasekas.pchelomatkas.pchelomatka\..+/'],
-                    ['pattern' => '/^app.proekts.page_glavas.pchelomatka\..+/'],
+                    ['pattern' => '/^app.proekts.pasekas.pchelomatkas.kategoris\..+/'],
+//                    ['pattern' => '/^app.proekts.page_glavas.pchelomatka\..+/'],
                     ['pattern' => '/^app.proekts.pasekas.pchelomatkas.rasa-pchelos.rasapchelo\..+/'],
                 ]
             )
