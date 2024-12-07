@@ -47,7 +47,7 @@ class CommentRasaController extends AbstractController
                                CommentPcheloFetcher $comments): Response
     {
 //        $rasas = $fetcher->all();
-
+//dd($rasa);
         $commentCommand = new CreatePchelo\Command(
             $this->getUser()->getId(),
             Ras::class,

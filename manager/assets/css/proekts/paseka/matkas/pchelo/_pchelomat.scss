@@ -72,6 +72,10 @@
   color: $red;
 }
 
+.col-bel-text {
+  color: $color-text;
+}
+
 .pchelo__data {
   display: flex; // добавляем т.к добаилась li-шка
   justify-content: space-between;

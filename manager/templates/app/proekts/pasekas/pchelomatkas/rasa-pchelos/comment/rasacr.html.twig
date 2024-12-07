@@ -8,9 +8,13 @@
     {{ include('app/proekts/page_glavas/pchelomatka/_tabs.html.twig') }}
 {% endblock %}
 
+
 {% block kroxii %}
-    <a href="{{ path('app.proekts.basepro') }}">Главная</a>
-    <span class="aktiv ">Написать запрос на новую расу</span>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.show') }}">Инфа: перед регистрацией.</a>
+    <a href="{{ path('app.proekts.pasekas.pchelomatkas.rasa-pchelos.infa') }}">Инфа: Новая раса.</a>
+    <a href="{{ path('app.proekts.pasekas.pchelomatkas.rasa-pchelos.rasapchelo') }}">Расы из БД - обзор.</a>
+    <span class="aktiv ">Написать запрос.</span>
+
 {% endblock %}
 
 {% block bodyy %}
@@ -46,6 +50,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="ma-bo-1 col-kras pchelo-titul">
+                Отправленные запросы
             </div>
             <div class="proekts proekts--rasa">
                 <div class="proekts-plr  ">
@@ -85,6 +92,7 @@
                                                                 <div class="delit-kar"></div>
                                                             </button>
                                                         </form>
+                                                        <span class="itall ma-le-26  col-kras"> Запрос принят </span>
                                                     </div>
                                                 {% endif %}
                                             </div>

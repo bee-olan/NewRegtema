@@ -38,7 +38,6 @@ class KategorController extends AbstractController
 
      /**
      * @Route("/infa", name=".infa")
-     * @param Request $request
      * @return Response
      */
     public function infa(): Response

@@ -16,24 +16,15 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("app/proekts/pasekas/pchelomatkas/rasa-pchelos/rasapchelo", name="app.proekts.pasekas.pchelomatkas.rasa-pchelos.rasapchelo")
+ * @Route("app/proekts/pasekas/pchelomatkas/rasa-pchelos", name="app.proekts.pasekas.pchelomatkas.rasa-pchelos")
  */
 
 class RasaPcheloController extends AbstractController
 {
-    private $errors;
-
-    public function __construct(ErrorHandler $errors)
-    {
-        $this->errors = $errors;
-    }
-
 
     /**
-     * @Route("", name="")
+     * @Route("/rasapchelo", name=".rasapchelo")
      * @param RasFetcher $fetcher
-//     * @param CommentPcheloFetcher $comments
-//     * @param Comment\CreatePchelo\Handler $commentHandler
      * @return Response
      */
     public function rasapchelo(Request $request, RasFetcher $fetcher
@@ -44,10 +35,15 @@ class RasaPcheloController extends AbstractController
 
         return $this->render('app/proekts/pasekas/pchelomatkas/rasa-pchelos/rasapchelo.html.twig', [
             'rasas' => $rasas,
-
         ]);
-
-
     }
+    /**
+     * @Route("/infa", name=".infa")
+     * @return Response
+     */
+    public function infa(): Response
+    {
 
+        return $this->render('/app/proekts/pasekas/pchelomatkas/rasa-pchelos/infa.html.twig' );
+    }
 }

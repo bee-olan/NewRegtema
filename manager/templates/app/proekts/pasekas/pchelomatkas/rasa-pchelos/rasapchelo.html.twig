@@ -12,9 +12,12 @@
 {% endblock %}
 
 {% block kroxii %}
-    <a href="{{ path('app.proekts.basepro') }}">Главная</a>
-    <span class="aktiv ">Расы из БД</span>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.show') }}">Инфа: перед регистрацией.</a>
+    <a href="{{ path('app.proekts.pasekas.pchelomatkas.rasa-pchelos.infa') }}">Инфа: Новая раса.</a>
+    <span class="aktiv ">Расы из БД - обзор.</span>
+
 {% endblock %}
+
 
 {% block bodyy %}
 
@@ -36,7 +39,7 @@
                     <ul class="pchelo__data pchelo__data--col ma-bo-2">
                         <li  class="pchelo__name pchelo__name--wid34">
                             <div class=" pchelo-titul ">
-                                <span class=" blink"> Внимание! </span> Если нет нужного названия Расы:
+                                <span class="col-kras"> Внимание! </span> Если нет нужного названия Расы:
                             </div>
 
                         </li>
