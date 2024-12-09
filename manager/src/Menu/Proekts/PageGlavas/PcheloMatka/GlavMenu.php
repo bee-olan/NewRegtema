@@ -29,7 +29,10 @@ class GlavMenu
             ->addChild('Инфа: Пчело-М ', ['route' => 'app.proekts.page_glavas.pchelomatka'])
             ->setExtra('routes', [
                 ['route' => 'app.proekts.page_glavas.pchelomatka'],
+                ['route' => 'app.proekts.pasekas.pchelomatkas.rasa-pchelos.infa'],
+                ['route' => 'app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.instr'],
                 ['pattern' => '/^app.proekts.page_glavas.pchelomatka\..+/'],
+
             ])
             ->setAttribute('class', 'nav_pro-item')
             ->setLinkAttribute('class', 'nav_pro-link');
@@ -39,9 +42,10 @@ class GlavMenu
             ->setExtra('routes', [
                 ['route' => 'app.proekts.pasekas.pchelomatkas'],
                 ['route' => 'app.proekts.pasekas.pchelomatkas.pchelomatka.show'],
+                ['route' => 'app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.show'],
                 ['route' => 'app.proekts.pasekas.pchelomatkas.spisoks'],
                 // ['route' => 'app.proekts.page_glavas.pchelomatka.spisok-instr'],
-                ['pattern' => '/^app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors\..+/'],
+//                ['pattern' => '/^app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.instr\..+/'],
 
             ])
             ->setAttribute('class', 'nav_pro-item')

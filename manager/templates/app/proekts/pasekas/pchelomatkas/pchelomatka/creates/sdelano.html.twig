@@ -12,10 +12,11 @@
 {% endblock %}
 
    {% block kroxii %}
-       <a href="{{ path('app.proekts.pasekas.pchelomatkas.spisoks') }}">Список Пчело - Маток</a>
-       <a href="{{ path('app.proekts.pasekas.pchelomatkas.spisoks') }}">К выбору сезонов </a>
+       <a href="{{ path('app.proekts.page_glavas.pchelomatka.show') }}">Инфа:  регистрация матки.</a>
+{#       <a href="{{ path('app.proekts.pasekas.pchelomatkas.spisoks') }}">Список Пчело - Маток</a>#}
+{#       <a href="{{ path('app.proekts.pasekas.pchelomatkas.spisoks') }}">К выбору сезонов </a>#}
        <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.show' , {'pchelomatka_id' : pchelomatka.id} ) }}">Расшифровка  названий </a>
-       <span class="aktiv ">Пчело - Матка в БД</span>
+       <span class="aktiv ">Записано в БД</span>
    {% endblock %}
 
 {% block bodyy %}

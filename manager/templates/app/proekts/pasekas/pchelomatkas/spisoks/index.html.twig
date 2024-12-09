@@ -13,10 +13,11 @@
 {% endblock %}
 
     {% block kroxii %}
-        {% if pagination %}
-            <a href="{{ path('app.proekts.page_glavas.pchelomatka.spisok-instr') }}">Инстрррр.</a>
-        {% endif %}
-
+        {#        {% if pagination %}#}
+        {#            <a href="{{ path('app.proekts.page_glavas.pchelomatka.spisok-instr') }}">Инстрррр.</a>#}
+        {#        {% endif %}#}
+        <a href="{{ path('app.proekts.page_glavas.pchelomatka.spisok-instr') }}">Инфа: после регистрации.</a>
+        <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.instr') }}">Инфа: Все переходы</a>
         <span class="aktiv ">Список </span>
     {% endblock %}
 
@@ -27,7 +28,7 @@
         <div class="inklud inklud--pchelomat ">
 
             <div class="pchelo-title  pchelo-teni ">
-                Список  Пчело - Маток &nbsp; &nbsp;
+                Список Пчело - Маток &nbsp; &nbsp;
             </div>
         </div>
         {# ------------------------- #}
@@ -58,7 +59,7 @@
                             </a>
                         </li>
 
-                        <li class="pchelo__name-list td_cent">
+                        <li class="pchelo__name-list ">
 
                             {{ pchelomatka.pchsezon_count }}
                         </li>
@@ -71,24 +72,28 @@
                                 <div class="drevimg "></div>
                             </a>
                         </li>
-                        {% if pchelomatka.pchsezon_count > 0 %}
-                            <li class="pchelo__name-list td_cent">
-{#                                <a href="#"#}
+
+                        <li class="pchelo__name-list ">
+                            {% if pchelomatka.pchsezon_count > 0 %}
                                 <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.childpchelos.show', {'pchelomatka_id': pchelomatka.id}) }}"
                                    class=" pchelo-ramka-spisok "
                                    title="Добавить ДочьМаток от этой маточки">
                                     <div class="matimg"></div>
                                 </a>
+                            {% else %}
 
-                            </li>
-                            <li class="pchelo__name--wid5 td_cent">
-                                {#                                ({{ pchelomatka.child_count }})#}
-                            </li>
-                        {% else %}
-                            <li class="pchelo__name-list">
-                                <strong class="strongo strongo--size-2"> <---</strong>
-                            </li>
-                        {% endif %}
+                                <a class=" pchelo-ramka-spisok "
+                                   href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.show', {'pchelomatka_id': pchelomatka.id}) }}"
+                                   title="Надо добавить рабочие сезоны">
+                                    <div class="drevimg "></div>
+                                </a>
+                            {% endif %}
+                        </li>
+
+
+                        <li > 0
+{#                                                            ({{ pchelomatka.child_count }})#}
+                        </li>
                         {#                    {% if pchelomatka.linia_o != "-"%}#}
                         {#                        <li class = "pchelo__name-list " >#}
                         {#                            <a class="" href="{{ path('app.proekts.pasekas.pchelomatkas.show', {'pchelomatka_id': pchelomatka.id}) }}"  title = "Расшифровка названия" >#}
@@ -172,8 +177,8 @@
         </div>
     </div>
 
-     <div class="navigation">
-               {{ knp_pagination_render(pagination) }}
-           </div>
+    <div class="navigation">
+        {{ knp_pagination_render(pagination) }}
+    </div>
 
 {% endblock %}

@@ -8,58 +8,58 @@
     {{ include('app/proekts/page_glavas/pchelomatka/_tabs.html.twig') }}
 {% endblock %}
 
-{% block kroxii %}
-    {# <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.show', {'pchelomatka_id': pchelomatka.id} )  }}"> #}
-        Добавить сезон . Статус</a>
-    <span class="aktiv ">Все переходы.</span>
-{% endblock %}
+ {% block kroxii %}
+     <a href="{{ path('app.proekts.page_glavas.pchelomatka.spisok-instr') }}">Инфа: после регистрации.</a>
+     <span class="aktiv ">Инфа: Все переходы</span>
+     {#     <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.instr') }}">Инфа: Все переходы</a>#}
+     <a href="{{ path('app.proekts.pasekas.pchelomatkas.spisoks') }}">Список Пчело-Маток</a>
+
+ {% endblock %}
 
 {% block bodyy %}
-    <div class=" proekts ">
+    <div class=" pa-to-2  ">
 
-        <div class="inklud inklud--pchelomat ">
-
-            <div class="pchelo-title  pchelo-teni ">
-                Работа с конкретной маткой.  Все переходы&nbsp; &nbsp;
-            </div>
+        <div class=" ma-bo-2 zagol-teni-44 col-bel-text">
+            Инфа: Все переходы.
+            <p> Работа   <span class="col-kras">с конкретной </span> маткой. &nbsp;</p>
         </div>
-        <div class="proekts-plr  ">
+    </div>
+    <div class="proekts-plr  ">
 
-            <ul class="mestoo__title">
+        <ul class="mestoo__title">
 
-                <li class="mestoo__title-item mestoo__nomer"   >
-                    1)
-                </li>
+            <li class="zagol-teni-44  zagol-teni-44--px32 col-bel-text ">
+                    Все переходы.
+            </li>
+            <li class="mestoo__title-item ">
+                <div class="foto-pchelo pchel-redakt"></div>
+            </li>
+        </ul>
 
-                <li class="mestoo__title-item mestoo__nomer">
-                    <a href="{{ path('app.proekts.pasekas.pchelomatkas.kategoris.kategor') }}"> 
-                     - Редактировать комментарий 
-                    </a>
-                </li>           
-            </ul>
-            <ul class="mestoo__title">
-                <li class="mestoo__title-item mestoo__nomer"   >
-                    2)
-                </li>
 
-                <li class="mestoo__title-item mestoo__nomer">
-                    <a href="{{ path('app.proekts.pasekas.pchelomatkas.kategoris.kategor') }}"> 
-                     Изменить статус 
-                    </a>
-                </li>           
-            </ul>
-            <ul class="mestoo__title">
-                <li class="mestoo__title-item mestoo__nomer"   >
-                    3)
-                </li>
+        <ul class="mestoo__title">
+            <li class="mestoo__title-item mestoo__nomer">
+                2)
+            </li>
 
-                <li class="mestoo__title-item mestoo__nomer">
-                    <a href="{{ path('app.proekts.pasekas.pchelomatkas.kategoris.kategor') }}"> 
-                     Добавить сезон 
-                    </a>
-                </li>           
-            </ul>
+            <li class="mestoo__title-item mestoo__nomer">
+                <a href="{{ path('app.proekts.pasekas.pchelomatkas.kategoris.kategor') }}">
+                    Изменить статус
+                </a>
+            </li>
+        </ul>
+        <ul class="mestoo__title">
+            <li class="mestoo__title-item mestoo__nomer">
+                3)
+            </li>
 
-        </div>
+            <li class="mestoo__title-item mestoo__nomer">
+                <a href="{{ path('app.proekts.pasekas.pchelomatkas.kategoris.kategor') }}">
+                    Добавить сезон
+                </a>
+            </li>
+        </ul>
+
+    </div>
     </div>
 {% endblock %}
