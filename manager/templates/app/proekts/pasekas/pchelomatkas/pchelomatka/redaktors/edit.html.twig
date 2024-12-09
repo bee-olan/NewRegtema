@@ -9,14 +9,16 @@
 {% endblock %}
 
 {% block kroxii %}
-    <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.instr') }}">Все переходы (инстр).</a>
-    <a href="{{ path('app.proekts.pasekas.pchelomatkas.spisoks') }}">Добавить сезон . Статус</a>
-    <span class="aktiv ">Все переходы.</span>
+    {#    <a href="{{ path('app.proekts.page_glavas.pchelomatka.spisok-instr') }}">Инфа: после регистрации.</a>#}
+    <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.instr') }}">Инфа: Все переходы.</a>
+    <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.show',
+        {'pchelomatka_id': pchelomatka.id}) }}">Добавить сезон. Статус</a>
+    <span class="aktiv ">Редактировать</span>
 {% endblock %}
 
 {% block bodyy %}
 
-    <div  class=" proekts pro-pchelomat">
+    <div class=" proekts pro-pchelomat">
 
         <div class="inklud inklud--pchelomat ">
 
@@ -25,22 +27,28 @@
             </div>
 
             <div class="pchelo-title  pchelo-teni ">
-            Редактировать комментарий у Пчело-Матки
-        </div> 
-    </div>
-
-    <div class="proekts-plr  ">
-    {# <h1 class="elit-titul  ">Отредактировать  комментарий.</h1> #}
-        <div class="plem-form__header  "> 
-            <div class="plem-form ">
-                {{ form_start(form) }}
-                {{ form_widget(form) }}
-                <button type="submit" class="btnn btnn--mb0 btnn--pt btnn--col">Сохранить</button>
-                {{ form_end(form) }}
-
+                Редактировать комментарий у Пчело-Матки
             </div>
         </div>
+
+        <div class="proekts-plr  ">
+            {# <h1 class="elit-titul  ">Отредактировать  комментарий.</h1> #}
+            <div class="plem-form__header  ">
+                <div class="plem-form ">
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    <div>
+                        <button type="submit" class="btnn btnn--mb0 btnn--pt btnn--col">Сохранить</button>&nbsp;
+                        <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.show',
+                            {'pchelomatka_id': pchelomatka.id}) }}" class="btnn btnn-pchel">Или
+                            вернуться на страничку</a>
+                    </div>
+                    {{ form_end(form) }}
+
+                </div>
+            </div>
+        </div>
+
     </div>
-</div>
 
 {% endblock %}
