@@ -8,9 +8,7 @@
 {% endblock %}
 
    {% block kroxii %}
-{#       <a href="{{ path('app.proekts.page_glavas.pchelomatka.spisok-instr') }}">Инфа: после регистрации.</a>#}
        <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.instr') }}">Инфа: Все переходы</a>
-{#       <a href="{{ path('app.proekts.pasekas.pchelomatkas.spisoks') }}">Список</a>#}
        <span class="aktiv ">Добавить сезон. Статус</span>
    {% endblock %}
 
@@ -116,13 +114,13 @@
                 </ul>
                 <ul class="pchelo pchelo__jus-st ">
                     <li class="pchelo__name pchelo__name--wid20 ">
-                        На страничку добавления ПчелоДочь :
+                        На страничку добавления Дочь - Пчело:
                     </li>
 
                     <li class=" pchelo__name--wid20">
                         <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.childpchelos.show', {'pchelomatka_id': pchelomatka.id}) }}"
                            class=" btnn btnn-pchel  ">
-                            Перейти к регистрации
+                            Перейти к выбору сезона
                         </a>
                     </li>
                 </ul>

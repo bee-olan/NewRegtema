@@ -7,13 +7,11 @@
     {{ include('app/proekts/page_glavas/pchelomatka/_tabs.html.twig') }}
 {% endblock %}
 
-{#   {% block kroxii %}#}
-{#       <a href="{{ path('proekt') }}">Главная</a>#}
-{#       <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelocreates') }}">Рег-ция Пчело-Матки</a>#}
-{#       <a href="{{ path('app.proekts.pasekas.matkas') }}">Список Пчело-Маток</a>#}
-{#       <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.show', {'pchelomatka_id': pchelomatka.id}) }}">{{ pchelomatka.name }}</a>#}
-{#       <span class="aktiv ">Выбрать сезон у Пчело-Матки</span>#}
-{#   {% endblock %}#}
+   {% block kroxii %}
+       <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.instr') }}">Инфа: Все переходы</a>
+       <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.show', {'pchelomatka_id': pchelomatka.id})  }}">Добавить сезон. Статус</a>
+       <span class="aktiv ">Сезон выхода Дочь - Пчело </span>
+   {% endblock %}
 
 {% block bodyy %}
 
@@ -22,7 +20,7 @@
         <div class="inklud inklud--pchelomat ">
 
             <div class="pchelo-title  pchelo-teni ">
-                Выбрать сезон у Пчело-Матки для добавления Дочь-Пчело
+               Выход Дочек. Выбрать из  сезонов  ПчелоМатки
             </div>
         </div>
 
