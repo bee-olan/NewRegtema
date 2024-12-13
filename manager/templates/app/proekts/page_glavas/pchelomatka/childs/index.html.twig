@@ -8,12 +8,45 @@
     {{ include('app/proekts/page_glavas/pchelomatka/childs/_tabs.html.twig') }}
 {% endblock %}
 
-{#{% block kroxii %}#}
-{#    <a href="{{ path('app.proekts.basepro') }}">Главная</a>#}
-{#    <span class="aktiv ">ПчелоДочь</span>#}
-{#{% endblock %}#}
+{% block kroxii %}
+    <span class="aktiv ">Выбор инфы.</span>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.childs.show') }}">Инфа: перед объявлением.</a>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.reg-infa') }}">Инфа:  объявление  дочек.</a>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.spisok-instr') }}">Инфа: после объявления.</a>
+
+{% endblock %}
 
 {% block bodyy %}
+    <div class="ma-bo-2 ma-ri-8">
+        <h2 class="zagol-pchelo-child-44">
+            Дочь - Пчело.
+            <p> Основные <span class="col-beloe">моменты </span> в картинках</p>
+        </h2>
+    </div>
 
-    Это ПчелоДочь. Тут будет что-то важное в картинках
+    <div class="ma-bo-2">
+        <div class="ma-bo-1">
+            <span class="zagol-pchelo-child-44 zagol-pchelo-child-44--px32 ">
+                <a href="{{ path('app.proekts.page_glavas.pchelomatka.show') }}">
+                 1)   <span class="col-beloe">Перед </span>   объявлением (добавлением) дочек.
+                 </a>
+            </span>
+        </div>
+        <div class="ma-bo-1">
+            <span class="zagol-pchelo-child-44 zagol-pchelo-child-44--px32">
+                <a href="{{ path('app.proekts.page_glavas.pchelomatka.reg-infa') }}">
+                  2)  <span class="col-beloe">Объявление (добавление)</span>   дочек.
+                </a>
+            </span>
+        </div>
+        <div>
+            <span class="zagol-pchelo-child-44 zagol-pchelo-child-44--px32">
+                <a href="{{ path('app.proekts.page_glavas.pchelomatka.spisok-instr') }}">
+                  3)  <span class="col-beloe">После </span>  объявления (добавления) дочек.
+                </a>
+            </span>
+        </div>
+
+    </div>
+
 {% endblock %}

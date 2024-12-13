@@ -4,7 +4,7 @@
 
 {% block menupro %}
     {{ include('app/proekts/_tabs.html.twig') }}
-    {{ include('app/proekts/page_glavas/pchelomatka/_tabs.html.twig') }}
+    {{ include('app/proekts/page_glavas/pchelomatka/childs/_tabs.html.twig') }}
 {% endblock %}
 
    {% block kroxii %}
@@ -52,7 +52,7 @@
                                                class="btnn   btnn-pchel  ">
                                                 <span class="strongo strongo--kras">{{ pchelosezon.name }} - {{ perii }}</span>
                                                 -
-                                                добавить Дочь-Пчело
+                                                объявить (добавить) Дочь - Пчело
                                             </a>
                                         </div>
                                     {% endif %}
@@ -61,12 +61,6 @@
                             {% endfor %}
                         </ul>
                     </li>
-{#                    <li class="ma-le_6 ">#}
-{#                        <ul class="list-unstyled ">#}
-{#                            <li >/=================/</li>#}
-{#                            <li>.................</li>#}
-{#                        </ul>#}
-{#                    </li>#}
 
                 </ul>
             {% endfor %}
@@ -80,7 +74,7 @@
                     </a>
                 </li>
                 <li> &nbsp;
-                    <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.pchelovods.edit',
+                    <a href="{{ path('app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors.pchelosezons.create',
                         {'pchelomatka_id': pchelomatka.id}) }}" class="  btnn-elit ">
                         <span class="strongo strongo--kras">  Добавить </span> ещё сезон!
                     </a>

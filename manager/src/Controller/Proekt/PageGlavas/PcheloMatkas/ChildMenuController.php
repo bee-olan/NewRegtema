@@ -47,6 +47,14 @@ class ChildMenuController extends AbstractController
 //        );
 //    }
 
+    /**
+     * @Route("", name="")
+     * @return Response
+     */
+    public function index(): Response
+    {
+        return $this->render('app/proekts/page_glavas/pchelomatka/childs/index.html.twig');
+    }
 
     /**
      * @Route("/show", name=".show")
@@ -56,4 +64,5 @@ class ChildMenuController extends AbstractController
     {
         return $this->render('app/proekts/page_glavas/pchelomatka/childs/show.html.twig');
     }
+
 }

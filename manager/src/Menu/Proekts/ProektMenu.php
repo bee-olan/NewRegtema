@@ -157,13 +157,15 @@ class ProektMenu
                     ['route' => 'app.proekts.page_glavas.pchelomatka.reg-infa'],
                     ['route' => 'app.proekts.page_glavas.pchelomatka.spisok-instr'],
                     ['route' => 'app.proekts.page_glavas.pchelomatka'],
-                    ['route' => 'app.proekts.pasekas.pchelomatkas.pchelomatka.creates.create'],
+//                    ['route' => 'app.proekts.pasekas.pchelomatkas.pchelomatka.creates.create'],
+                    ['route' => 'app.proekts.pasekas.pchelomatkas.pchelomatka.show'],
                     ['route' => 'app.proekts.pasekas.pchelomatkas.spisoks'],
                     ['route' => 'app.proekts.pasekas.pchelomatkas.kategoris.kategor'],
                     ['route' => 'app.proekts.pasekas.pchelomatkas.rasa-pchelos.rasapchelo'],
                     ['route' => 'app.proekts.pasekas.pchelomatkas.rasa-pchelos.comment.rasacr'],
                     ['route' => 'app.proekts.pasekas.pchelomatkas.rasa-pchelos.infa'],
-                    ['pattern' => '/^app.proekts.pasekas.pchelomatkas.pchelomatka\..+/'],
+                    ['pattern' => '/^app.proekts.pasekas.pchelomatkas.pchelomatka.redaktors\..+/'],
+                    ['pattern' => '/^app.proekts.pasekas.pchelomatkas.pchelomatka.creates\..+/'],
                     ['pattern' => '/^app.proekts.pasekas.pchelomatkas.kategoris\..+/'],
 //                    ['pattern' => '/^app.proekts.page_glavas.pchelomatka\..+/'],
                     ['pattern' => '/^app.proekts.pasekas.pchelomatkas.rasa-pchelos.rasapchelo\..+/'],
@@ -173,13 +175,14 @@ class ProektMenu
             ->setLinkAttribute('class', 'nav_pro-link');
 
         $menu
-            ->addChild('Дочь-Пчело', ['route' => 'app.proekts.page_glavas.pchelomatka.childs.show'])
+            ->addChild('Дочь-Пчело', ['route' => 'app.proekts.page_glavas.pchelomatka.childs'])
             ->setExtra(
                 'routes',
                 [
                     ['route' => 'app.proekts.page_glavas.pchelomatka.childs'],
                     ['route' => 'app.proekts.pasekas.childpchelos'],
-                    ['pattern' => '/^app.proekts.page_glavas.pchelomatka.childs\..+/']
+                    ['pattern' => '/^app.proekts.page_glavas.pchelomatka.childs\..+/'],
+                    ['pattern' => '/^app.proekts.pasekas.pchelomatkas.pchelomatka.childpchelos\..+/'],
                 ]
             )
             ->setAttribute('class', 'nav_pro-item ')

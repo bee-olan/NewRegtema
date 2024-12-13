@@ -25,10 +25,19 @@ class ChildMenu
         $menu = $this->factory->createItem('root')
             ->setChildrenAttributes(['class' => 'nav_pro nav_pro-tabs mb-4']);
         $menu
-            ->addChild('ПчелоДочь', ['route' => 'app.proekts.page_glavas.pchelomatka.childs.show'])
+            ->addChild('Инфа: Дочь - Пчело', ['route' => 'app.proekts.page_glavas.pchelomatka.childs'])
             ->setExtra('routes', [
                 ['route' => 'app.proekts.page_glavas.pchelomatka.childs'],
                 ['pattern' => '/^app.proekts.page_glavas.pchelomatka.childs\..+/']
+            ])
+            ->setAttribute('class', 'nav_pro-item')
+            ->setLinkAttribute('class', 'nav_pro-link');
+
+        $menu
+            ->addChild('Выбрать Сезон ', ['route' => 'app.proekts.pasekas.pchelomatkas.spisoks'])
+            ->setExtra('routes', [
+                ['route' => 'app.proekts.pasekas.childpchelos'],
+                ['pattern' => '/^app.proekts.pasekas.pchelomatkas.pchelomatka.childpchelos\..+/']
             ])
             ->setAttribute('class', 'nav_pro-item')
             ->setLinkAttribute('class', 'nav_pro-link');
