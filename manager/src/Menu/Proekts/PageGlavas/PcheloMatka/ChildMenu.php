@@ -43,6 +43,14 @@ class ChildMenu
             ->setLinkAttribute('class', 'nav_pro-link');
 
         $menu
+            ->addChild('Объявить  дочек', ['route' => 'app.proekts.pasekas.pchelomatkas.spisoks'])
+            ->setExtra('routes', [
+                ['route' => 'app.proekts.pasekas.childpchelos'],
+                ['pattern' => '/^app.proekts.pasekas.pchelomatkas.pchelomatka.childpchelos\..+/']
+            ])
+            ->setAttribute('class', 'nav_pro-item')
+            ->setLinkAttribute('class', 'nav_pro-link');
+        $menu
             ->addChild('Список!', ['route' => 'app.proekts.pasekas.childpchelos'])
             ->setExtra('routes', [
                 ['route' => 'app.proekts.pasekas.childpchelos'],

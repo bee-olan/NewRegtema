@@ -27,7 +27,7 @@ class Form extends AbstractType
                 ]])
 
             ->add('kol', Type\ChoiceType::class, [
-                'label' => '2) Сколько (кол-во) маточек регистрировать?',
+                'label' => '2) Сколько (кол-во) дочек объявлять?',
 //                'required' => false,
                 'choices' => [
                     '1' => 1,
@@ -40,7 +40,7 @@ class Form extends AbstractType
             ])
 
             ->add('personKolChild', Type\IntegerType::class, [
-                            'label' => '3) Начиная с какого числа ? , но больше ->',
+                            'label' => '3) Нумерация дочек начиная с какого числа ? , но больше ->',
                         ])
 
             ->add('plan_date', Type\DateType::class, [
@@ -50,7 +50,7 @@ class Form extends AbstractType
                 'input' => 'datetime_immutable'
                 ])
              ->add('type', Type\ChoiceType::class, [
-                 'label' => '5) Выбрать вид   облета !!!:   ',
+                 'label' => '5) Выбрать вид   облета :   ',
                  'choices' => [
                      'тф-бк' => ChildPcheloType::TFBK,
                      'тф-90' => ChildPcheloType::TF90,
@@ -62,7 +62,7 @@ class Form extends AbstractType
 
 
             ->add('priority', Type\ChoiceType::class, [
-                'label' => '6) Приоритеты для заказа на тестирование   ',
+                'label' => '6) Приоритет  предложения дочек   ',
                 'choices' => [
                 'Низкий' => 1,
                 'Обычный' => 2,

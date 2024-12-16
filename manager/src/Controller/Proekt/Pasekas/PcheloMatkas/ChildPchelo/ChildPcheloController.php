@@ -185,7 +185,7 @@ class ChildPcheloController extends AbstractController
                 $this->addFlash('error', $e->getMessage());
             }
         }
-
+//dd($pchelomatka);
         return $this->render('app/proekts/pasekas/pchelomatkas/pchelomatka/childpchelos/create.html.twig', [
             'pchelomatka' => $pchelomatka,
             'pchelosezonPlem' => $pchelosezonPlem,

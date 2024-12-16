@@ -31,7 +31,7 @@ class Command
      */
     public $text;
 //
-    public function __construct(string $author, string $type, string $id)
+    public function __construct(string $author, string $type, int $id)
     {
         $this->author = $author;
         $this->entityType = $type;

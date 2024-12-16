@@ -7,6 +7,15 @@
     {{ include('app/proekts/page_glavas/pchelomatka/childs/_tabs.html.twig') }}
 {% endblock %}
 
+{% block kroxii %}
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.childs') }}"> Выбор инфы..</a>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.childs.show') }}">Инфа: перед объявлением.</a>
+    <span class="aktiv ">Инфа:  объявление  дочек.</span>
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.spisok-instr') }}">Инфа: после объявления.</a>
+
+
+{% endblock %}
+
 {% block bodyy %}
 
     <div class="  proekts proekts--pchelomat ">
