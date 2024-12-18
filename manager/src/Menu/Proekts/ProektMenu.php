@@ -183,6 +183,7 @@ class ProektMenu
                     ['route' => 'app.proekts.pasekas.childpchelos'],
                     ['pattern' => '/^app.proekts.page_glavas.pchelomatka.childs\..+/'],
                     ['pattern' => '/^app.proekts.pasekas.pchelomatkas.pchelomatka.childpchelos\..+/'],
+                    ['pattern' => '/^app.proekts.pasekas.childpchelos\..+/'],
                 ]
             )
             ->setAttribute('class', 'nav_pro-item ')

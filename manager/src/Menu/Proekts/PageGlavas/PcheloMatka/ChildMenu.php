@@ -36,8 +36,8 @@ class ChildMenu
         $menu
             ->addChild('Выбрать Сезон ', ['route' => 'app.proekts.pasekas.pchelomatkas.spisoks'])
             ->setExtra('routes', [
-                ['route' => 'app.proekts.pasekas.childpchelos'],
-                ['pattern' => '/^app.proekts.pasekas.pchelomatkas.pchelomatka.childpchelos\..+/']
+//                ['route' => 'app.proekts.pasekas.childpchelos'],
+//                ['pattern' => '/^app.proekts.pasekas.pchelomatkas.pchelomatka.childpchelos\..+/']
             ])
             ->setAttribute('class', 'nav_pro-item')
             ->setLinkAttribute('class', 'nav_pro-link');
@@ -45,7 +45,7 @@ class ChildMenu
         $menu
             ->addChild('Объявить  дочек', ['route' => 'app.proekts.pasekas.pchelomatkas.spisoks'])
             ->setExtra('routes', [
-                ['route' => 'app.proekts.pasekas.childpchelos'],
+//                ['route' => 'app.proekts.pasekas.childpchelos'],
                 ['pattern' => '/^app.proekts.pasekas.pchelomatkas.pchelomatka.childpchelos\..+/']
             ])
             ->setAttribute('class', 'nav_pro-item')

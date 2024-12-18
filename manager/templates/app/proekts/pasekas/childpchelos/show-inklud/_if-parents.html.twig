@@ -12,7 +12,7 @@
         {% if childpchelo.parent %}
             <a href="{{ path('app.proekts.pasekas.childpchelos.show', {'id': childpchelo.parent.id}) }}">
                 <span class="elit-titul  ">  Материнка  -   </span>
-                {{ childpchelo.parent.name }}
+                  <span class="child-tabl-col ">  {{ childpchelo.parent.name }}  </span>
             </a>
             <span class="elit-titul  ">  > для >   </span>
         {% else %}

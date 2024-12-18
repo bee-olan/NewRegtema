@@ -74,4 +74,21 @@ class ChildMenuController extends AbstractController
         return $this->render('app/proekts/page_glavas/pchelomatka/childs/reg-infa.html.twig');
     }
 
+    /**
+     * @Route("/spisok-instr", name=".spisok-instr")
+     * @return Response
+     */
+    public function spisok(): Response
+    {
+        return $this->render('app/proekts/page_glavas/pchelomatka/childs/spisok-instr.html.twig');
+    }
+
+    /**
+     * @Route("/lichnaja", name=".lichnaja")
+     * @return Response
+     */
+    public function lichnaja(): Response
+    {
+        return $this->render('app/proekts/page_glavas/pchelomatka/childs/lichnaja.html.twig');
+    }
 }

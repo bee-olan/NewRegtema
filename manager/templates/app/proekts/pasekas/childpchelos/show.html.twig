@@ -7,7 +7,12 @@
     {{ include('app/proekts/page_glavas/pchelomatka/childs/_tabs.html.twig') }}
 {% endblock %}
 
- {% block kroxii %} {% endblock %}
+{% block kroxii %}
+    <a href="{{ path('app.proekts.page_glavas.pchelomatka.childs.lichnaja') }}">Инфа: Личная страничка  </a>
+    <span class="aktiv ">Личная страничка : </span>
+{#    <span >Личная страничка : </span>#}
+    <a href="#"> {{ childpchelo.name }} </a>
+{% endblock %}
 
 {% block bodyy %}
 
