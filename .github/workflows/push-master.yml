@@ -34,8 +34,8 @@ jobs:
                     path: manager/vendor
                     key: composer-${{ hashFiles('manager/composer.lock') }}
 
-    #         -   name: Set registry env
-    #             run:  echo "REGISTRY_ADDRESS=ghcr.io/${GITHUB_REPOSITORY,,}" >> $GITHUB_ENV
+            -   name: Set registry env
+                run:  echo "REGISTRY_ADDRESS=ghcr.io/${GITHUB_REPOSITORY,,}" >> $GITHUB_ENV
 
     #         -   name: Docker login
     #             uses: azure/docker-login@v1
