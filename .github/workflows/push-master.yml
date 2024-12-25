@@ -48,8 +48,8 @@ jobs:
             -   name: Permissions
                 run: sudo chown -R 1000:1000 .
 
-            -   name: Init
-                run: make init
+            # -   name: Init
+            #     run: make init
 
     #         -   name: Test
     #             run: make manager-test
