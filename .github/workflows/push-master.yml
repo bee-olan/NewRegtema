@@ -42,8 +42,7 @@ jobs:
                 with:
                     login-server: ${{ env.REGISTRY_HOST }}
                     username: ${{ secrets.REGISTRY_USER }}
-                    password: ${{ secrets.REGISTRY_PASSWORD }}
-                    # password: ${{ github.token }}
+                    password: ${{ github.token }}
 
             -   name: Permissions
                 run: sudo chown -R 1000:1000 .
