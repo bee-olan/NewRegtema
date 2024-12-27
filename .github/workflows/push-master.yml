@@ -47,7 +47,8 @@ jobs:
             -   name: Permissions
                 run: sudo chown -R 1000:1000 .
 
-            # -   name: Init
+            -   name: Init
+                run: make docker-up
             #     run: make init
 
     #         -   name: Test
