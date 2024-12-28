@@ -44,11 +44,11 @@ jobs:
                     username: ${{ secrets.REGISTRY_USER }}
                     password: ${{ github.token }}
 
-            # -   name: Permissions
-            #     run: sudo chown -R 1000:1000 .
+            -   name: Permissions
+                run: sudo chown -R 1000:1000 .
 
             -   name: Init
-                run: make init
+                run: sudo make init
 
     #         -   name: Test
     #             run: make manager-test
