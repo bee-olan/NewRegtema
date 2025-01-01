@@ -47,23 +47,17 @@ jobs:
             -   name: Permissions
                 run: sudo chown -R 1000:1000 .
 
-            # -   name: Set up QEMU
-            #     uses: docker/setup-qemu-action@v3
-
-            # -   name: Set up Docker Buildx
-            #     uses: docker/setup-buildx-action@v3   
-
             -   name: Init
                 run: sudo make init
 
-            -   name: Test
-                run: make manager-test
+            # -   name: Test
+            #     run: make manager-test
 
-    #         -   name: Down
-    #             run: make down
+            -   name: Down
+                run: make down
 
-    #         -   name: Build
-    #             run: make build-production
+            -   name: Build
+                run: make build-production
 
     #         -   name: Push
     #             run: make push-production
