@@ -56,8 +56,8 @@ jobs:
             -   name: Init
                 run: sudo make init
 
-    #         -   name: Test
-    #             run: make manager-test
+            -   name: Test
+                run: make manager-test
 
     #         -   name: Down
     #             run: make down
