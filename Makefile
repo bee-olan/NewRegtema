@@ -8,19 +8,19 @@ test-unit: manager-test-unit
 test-unit-coverage: manager-test-unit-coverage
 
 docker-up:
-	docker-compose up -d
+	docker compose up -d
 
 docker-down:
-	docker-compose down --remove-orphans
+	docker compose down --remove-orphans
 
 docker-down-clear:
-	docker-compose down -v --remove-orphans
+	docker compose down -v --remove-orphans
 
 docker-pull:
-	docker-compose pull
+	docker compose pull
 
 docker-build:
-	docker-compose build
+	docker compose build
 
 manager-init: manager-composer-install manager-assets-install manager-oauth-keys manager-wait-db manager-migrations manager-fixtures manager-ready
 
@@ -28,44 +28,44 @@ manager-clear:
 	docker run --rm -v ${PWD}/manager:/app --workdir=/app alpine rm -f .ready
 
 manager-composer-install:
-	docker-compose run --rm manager-php-cli composer install
+	docker compose run --rm manager-php-cli composer install
 
 manager-assets-install:
-	docker-compose run --rm manager-node yarn install
-	docker-compose run --rm manager-node npm rebuild node-sass
+	docker compose run --rm manager-node yarn install
+	docker compose run --rm manager-node npm rebuild node-sass
 
 manager-oauth-keys:
-	docker-compose run --rm manager-php-cli mkdir -p var/oauth
-	docker-compose run --rm manager-php-cli openssl genrsa -out var/oauth/private.key 2048
-	docker-compose run --rm manager-php-cli openssl rsa -in var/oauth/private.key -pubout -out var/oauth/public.key
-	docker-compose run --rm manager-php-cli chmod 644 var/oauth/private.key var/oauth/public.key
+	docker compose run --rm manager-php-cli mkdir -p var/oauth
+	docker compose run --rm manager-php-cli openssl genrsa -out var/oauth/private.key 2048
+	docker compose run --rm manager-php-cli openssl rsa -in var/oauth/private.key -pubout -out var/oauth/public.key
+	docker compose run --rm manager-php-cli chmod 644 var/oauth/private.key var/oauth/public.key
 
 manager-wait-db:
-	until docker-compose exec -T manager-postgres pg_isready --timeout=0 --dbname=app ; do sleep 1 ; done
+	until docker compose exec -T manager-postgres pg_isready --timeout=0 --dbname=app ; do sleep 1 ; done
 
 manager-migrations:
-	docker-compose run --rm manager-php-cli php bin/console doctrine:migrations:migrate --no-interaction
+	docker compose run --rm manager-php-cli php bin/console doctrine:migrations:migrate --no-interaction
 
 manager-fixtures:
-	docker-compose run --rm manager-php-cli php bin/console doctrine:fixtures:load --no-interaction
+	docker compose run --rm manager-php-cli php bin/console doctrine:fixtures:load --no-interaction
 
 manager-ready:
 	docker run --rm -v ${PWD}/manager:/app --workdir=/app alpine touch .ready
 
 manager-assets-dev:
-	docker-compose run --rm manager-node npm run dev
+	docker compose run --rm manager-node npm run dev
 
 manager-test:
-	docker-compose run --rm manager-php-cli php bin/phpunit
+	docker compose run --rm manager-php-cli php bin/phpunit
 
 manager-test-coverage:
-	docker-compose run --rm manager-php-cli php bin/phpunit --coverage-clover var/clover.xml --coverage-html var/coverage
+	docker compose run --rm manager-php-cli php bin/phpunit --coverage-clover var/clover.xml --coverage-html var/coverage
 
 manager-test-unit:
-	docker-compose run --rm manager-php-cli php bin/phpunit --testsuite=unit
+	docker compose run --rm manager-php-cli php bin/phpunit --testsuite=unit
 
 manager-test-unit-coverage:
-	docker-compose run --rm manager-php-cli php bin/phpunit --testsuite=unit --coverage-clover var/clover.xml --coverage-html var/coverage
+	docker compose run --rm manager-php-cli php bin/phpunit --testsuite=unit --coverage-clover var/clover.xml --coverage-html var/coverage
 
 build-production:
 	docker build --pull --file=manager/docker/production/nginx.docker --tag ${REGISTRY_ADDRESS}/manager-nginx:${IMAGE_TAG} manager
@@ -85,7 +85,7 @@ push-production:
 
 deploy-production:
 	ssh -o StrictHostKeyChecking=no ${PRODUCTION_HOST} -p ${PRODUCTION_PORT} 'rm -rf docker-compose.yml .env'
-	scp -o StrictHostKeyChecking=no -P ${PRODUCTION_PORT} docker-compose-production.yml ${PRODUCTION_HOST}:docker-compose.yml
+	scp -o StrictHostKeyChecking=no -P ${PRODUCTION_PORT} docker compose-production.yml ${PRODUCTION_HOST}:docker-compose.yml
 	ssh -o StrictHostKeyChecking=no ${PRODUCTION_HOST} -p ${PRODUCTION_PORT} 'echo "REGISTRY_ADDRESS=${REGISTRY_ADDRESS}" >> .env'
 	ssh -o StrictHostKeyChecking=no ${PRODUCTION_HOST} -p ${PRODUCTION_PORT} 'echo "IMAGE_TAG=${IMAGE_TAG}" >> .env'
 	ssh -o StrictHostKeyChecking=no ${PRODUCTION_HOST} -p ${PRODUCTION_PORT} 'echo "MANAGER_APP_SECRET=${MANAGER_APP_SECRET}" >> .env'
@@ -100,7 +100,7 @@ deploy-production:
 	ssh -o StrictHostKeyChecking=no ${PRODUCTION_HOST} -p ${PRODUCTION_PORT} 'echo "CENTRIFUGO_WS_HOST=${CENTRIFUGO_WS_HOST}" >> .env'
 	ssh -o StrictHostKeyChecking=no ${PRODUCTION_HOST} -p ${PRODUCTION_PORT} 'echo "CENTRIFUGO_API_KEY=${CENTRIFUGO_API_KEY}" >> .env'
 	ssh -o StrictHostKeyChecking=no ${PRODUCTION_HOST} -p ${PRODUCTION_PORT} 'echo "CENTRIFUGO_SECRET=${CENTRIFUGO_SECRET}" >> .env'
-	ssh -o StrictHostKeyChecking=no ${PRODUCTION_HOST} -p ${PRODUCTION_PORT} 'docker-compose pull'
-	ssh -o StrictHostKeyChecking=no ${PRODUCTION_HOST} -p ${PRODUCTION_PORT} 'docker-compose up --build -d'
-	ssh -o StrictHostKeyChecking=no ${PRODUCTION_HOST} -p ${PRODUCTION_PORT} 'until docker-compose exec -T manager-postgres pg_isready --timeout=0 --dbname=app ; do sleep 1 ; done'
-	ssh -o StrictHostKeyChecking=no ${PRODUCTION_HOST} -p ${PRODUCTION_PORT} 'docker-compose run --rm manager-php-cli php bin/console doctrine:migrations:migrate --no-interaction'
+	ssh -o StrictHostKeyChecking=no ${PRODUCTION_HOST} -p ${PRODUCTION_PORT} 'docker compose pull'
+	ssh -o StrictHostKeyChecking=no ${PRODUCTION_HOST} -p ${PRODUCTION_PORT} 'docker compose up --build -d'
+	ssh -o StrictHostKeyChecking=no ${PRODUCTION_HOST} -p ${PRODUCTION_PORT} 'until docker compose exec -T manager-postgres pg_isready --timeout=0 --dbname=app ; do sleep 1 ; done'
+	ssh -o StrictHostKeyChecking=no ${PRODUCTION_HOST} -p ${PRODUCTION_PORT} 'docker compose run --rm manager-php-cli php bin/console doctrine:migrations:migrate --no-interaction'
