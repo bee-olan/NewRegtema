@@ -47,6 +47,9 @@ jobs:
             -   name: Permissions
                 run: sudo chown -R 1000:1000 .
 
+            -   name: Install docker
+                uses: docker-practice/actions-setup-docker@master    
+
             -   name: Init
                 run: sudo make init
 
